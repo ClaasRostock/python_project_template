@@ -26,6 +26,6 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/ClaasRostock/mypackage/compare/v0.0.1...HEAD
-[0.0.1]: https://github.com/ClaasRostock/mypackage/releases/tag/v0.0.1
-[mypackage]: https://github.com/ClaasRostock/mypackage
+[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/AuthorOne/mypackage/releases/tag/v0.0.1
+[mypackage]: https://github.com/AuthorOne/mypackage

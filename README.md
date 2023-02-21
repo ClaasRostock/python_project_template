@@ -39,7 +39,7 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
 3. git clone the mypackage repository into your local development directory:
 
     ~~~sh
-    git clone https://github.com/ClaasRostock/mypackage path/to/your/dev/mypackage
+    git clone https://github.com/AuthorOne/mypackage path/to/your/dev/mypackage
     ~~~
 
 4. In the mypackage root folder:
@@ -68,9 +68,9 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
 
 ## Meta
 
-Copyright (c) 2023 [Claas Rostock](https://github.com/ClaasRostock)
+Copyright (c) 2023 [Author One](https://github.com/AuthorOne)
 
-Claas Rostock – [@LinkedIn](https://www.linkedin.com/in/claasrostock/?locale=en_US) – claas.rostock@dnv.com
+Author One – [@LinkedIn](https://www.linkedin.com/in/authorone) – author.one@xyz.com
 
 Author Two – [@LinkedIn](https://www.linkedin.com/in/authortwo) – author.two@xyz.com
 
@@ -78,11 +78,11 @@ Author Three – [@LinkedIn](https://www.linkedin.com/in/authorthree) – author
 
 Distributed under the MIT license. See [LICENSE](LICENSE.md) for more information.
 
-[https://github.com/ClaasRostock/mypackage](https://github.com/ClaasRostock/mypackage)
+[https://github.com/AuthorOne/mypackage](https://github.com/AuthorOne/mypackage)
 
 ## Contributing
 
-1. Fork it (<https://github.com/ClaasRostock/mypackage/fork>)
+1. Fork it (<https://github.com/AuthorOne/mypackage/fork>)
 2. Create your branch (`git checkout -b myBranchName`)
 3. Commit your changes (`git commit -am 'place your commit message here'`)
 4. Push to the branch (`git push origin myBranchName`)
@@ -91,5 +91,4 @@ Distributed under the MIT license. See [LICENSE](LICENSE.md) for more informatio
 For your contribution, please make sure you follow the [STYLEGUIDE](STYLEGUIDE.md) before creating the Pull Request.
 
 <!-- Markdown link & img dfn's -->
-[mypackage_docs]: https://ClaasRostock.github.io/mypackage/README.html
-
+[mypackage_docs]: https://AuthorOne.github.io/mypackage/README.html

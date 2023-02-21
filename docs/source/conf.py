@@ -19,8 +19,8 @@ sys.path.insert(0, os.path.abspath("../../src"))
 # -- Project information -----------------------------------------------------
 
 project = "mypackage"
-copyright = "2023, DNV AS"
-author = "Author 1, Author 2, Author 3"
+copyright = "2023, Author One"
+author = "Author One, Author Two, Author Three"
 
 # The full version, including alpha/beta/rc tags
 release = "0.0.1"
