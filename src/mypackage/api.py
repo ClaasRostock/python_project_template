@@ -3,8 +3,10 @@ import os
 from pathlib import Path
 from typing import Union
 
-from mypackage.subpackage1.module import int_to_str
-from mypackage.subpackage2.module import str_to_int
+from dictIO import DictReader
+
+from mypackage.subpackage1.module1 import int_to_str
+from mypackage.subpackage2.module2 import str_to_int
 
 __ALL__ = ["run_mypackage", "MyPackageProcess"]
 
@@ -35,14 +37,13 @@ def run(
     # Make sure config_file argument is of type Path. If not, cast it to Path type.
     config_file = config_file if isinstance(config_file, Path) else Path(config_file)
 
-    # Check whether mypackage config file exists
+    # Check whether config file exists
     if not config_file.exists():
         logger.error(f"run_mypackage: File {config_file} not found.")
         raise FileNotFoundError(config_file)
 
     if option:
-        msg: str = "run: 'option' is set to True. mypackage process will do something differently."
-        logger.info(msg)
+        logger.info("option is True. mypackage process will do something differently.")
 
     process = MyPackageProcess(config_file)
     process.run()
@@ -57,7 +58,7 @@ class MyPackageProcess:
     ):
         self.config_file: Path = config_file
         self._run_number: int = 0
-        self.max_number_of_runs: int = 3
+        self._max_number_of_runs: int = 1
         self.terminate: bool = False
         self._read_config_file()
         return
@@ -71,13 +72,40 @@ class MyPackageProcess:
         # Run mypackage process until termination is flagged
         while not self.terminate:
             self._run_process()
-            self.terminate = self._run_number >= self.max_number_of_runs
+            self.terminate = self._run_number >= self._max_number_of_runs
         return
 
     @property
     def run_number(self) -> int:
-        """Read only property for _run_number instance variable."""
+        """Example for a read only property."""
         return self._run_number
+
+    @property
+    def max_number_of_runs(self) -> int:
+        """Example for a read/write property implemented through a pair of explicit
+        getter and setter methods (see below for the related setter method).
+        """
+        return self._max_number_of_runs
+
+    @max_number_of_runs.setter
+    def max_number_of_runs(self, value: int):
+        """Setter method that belongs to above getter method.
+
+        Note that implementing specific getter- and setter methods is in most cases not necessary.
+        The same can be achieved by simply making the instance variable a public attribute.
+        I.e., declaring the instance variable in __init__() not as
+        self._max_number_of_runs: int = ..  # (-> private instance variable)
+        but as
+        self.max_number_of_runs: int = ..   # (-> public attribute)
+
+        However, in some cases the additional effort of implementing explicit getter- and setter- methods
+        as in this example can be reasoned, for instance if you have a need for increased control
+        and want be able to cancel or alter code execution, or write log messages whenever a property
+        gets reads or written from outside.
+        """
+
+        self._max_number_of_runs = value
+        return
 
     def _run_process(self):
         """Execute a single run of the mypackage process."""
@@ -95,14 +123,17 @@ class MyPackageProcess:
         return
 
     def _read_config_file(self):
-        """Read config file and do some set-up and configuration stuff depending on its content."""
-        pass
+        """Read config file."""
+        config = DictReader.read(self.config_file)
+        if "max_number_of_runs" in config:
+            self._max_number_of_runs = config["max_number_of_runs"]
+        return
 
 
 def _do_cool_stuff(run_number: int) -> str:
     """Do cool stuff.
 
-    Converts the passed in run number into a string.
+    Converts the passed in run number to a string.
 
     Parameters
     ----------
@@ -121,7 +152,7 @@ def _do_cool_stuff(run_number: int) -> str:
 def _do_even_cooler_stuff(string: str) -> int:
     """Do even cooler stuff.
 
-    Converts the passed in string-formatted integer back into an integer.
+    Converts the passed in string-formatted integer back to an integer.
 
     Parameters
     ----------

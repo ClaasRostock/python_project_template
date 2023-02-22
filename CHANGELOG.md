@@ -22,7 +22,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ### Dependencies
 
-* updated to somedependencyonpypi>=0.1.0
+* updated to some_package_on_pypi>=0.1.0
 
 
 <!-- Markdown link & img dfn's -->

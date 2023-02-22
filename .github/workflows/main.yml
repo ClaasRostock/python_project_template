@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Install ruff
-        run: pip install ruff>=0.0.240
+        run: pip install ruff>=0.0.251
       - name: Run ruff
         run: ruff .
 
@@ -46,7 +46,7 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
       - name: Install pyright
-        run: pip install pyright>=1.1.292
+        run: pip install pyright>=1.1.295
       - name: Run pyright
         run: pyright .
 

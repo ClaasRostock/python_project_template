@@ -9,7 +9,7 @@ from pytest import LogCaptureFixture
 
 @pytest.fixture(scope="package", autouse=True)
 def chdir():
-    os.chdir(Path(__file__).parent.absolute() / "test_output")
+    os.chdir(Path(__file__).parent.absolute() / "test_working_directory")
 
 
 output_dirs = [
