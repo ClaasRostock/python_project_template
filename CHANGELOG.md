@@ -12,17 +12,32 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 * Initial release
 
-### Changed
-
-* changed this
-
 ### Added
 
-* added that
+* added this
+
+### Changed
+
+* changed that
 
 ### Dependencies
 
 * updated to some_package_on_pypi>=0.1.0
+
+### Fixed
+
+* fixed issue #12345
+
+### Deprecated
+
+* following features will soon be removed and have been marked as deprecated:
+    * function x in module z
+
+### Removed
+
+* following features have been removed:
+    * function y in module z
+
 
 
 <!-- Markdown link & img dfn's -->
