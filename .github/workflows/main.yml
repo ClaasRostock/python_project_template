@@ -182,20 +182,27 @@ jobs:
   #         user: __token__
   #         password: ${{ secrets.PYPI_API_TOKEN }}
 
-  # merge_to_release_branch:
-  #   name: Merge ${{ github.event.ref }} -> release branch
-  #   needs: publish
-  #   runs-on: ubuntu-latest
-  #   environment: release
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #       with:
-  #         # Fetch the whole history to prevent unrelated history errors
-  #         fetch-depth: 0
-  #         # The branch you want to checkout (usually equal to `branchtomerge`)
-  #         # ref: ${{ github.event.ref }}
-  #     - uses: devmasx/merge-branch@v1.4.0
-  #       with:
-  #         type: now
-  #         target_branch: release
-  #         github_token: ${{ secrets.RELEASE_TOKEN }}
+  merge_to_release_branch:
+    name: Merge ${{ github.event.ref }} -> release branch
+    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    environment: release
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # Fetch the whole history to prevent unrelated history errors
+          fetch-depth: 0
+          # The branch you want to checkout (usually equal to `branchtomerge`)
+          # ref: ${{ github.event.ref }}
+      - uses: devmasx/merge-branch@v1.4.0
+        with:
+          type: now
+          target_branch: release
+          # @TODO: A dedicated RELEASE_TOKEN should be created in the repo settings
+          #        and used for this task when in production.
+          #        It is set here to the default GITHUB_TOKEN only
+          #        for demonstration purposes, enabling the workflow in the repo template
+          #        to run without additional configuration.
+          # github_token: ${{ secrets.RELEASE_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
