@@ -1,5 +1,5 @@
 mypackage.subpackage2 package
-=================
+=============================
 
 .. automodule:: mypackage.subpackage2
    :members:
@@ -12,4 +12,4 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   mypackage.subpackage2.module
+   mypackage.subpackage2.module2

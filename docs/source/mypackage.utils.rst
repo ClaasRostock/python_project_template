@@ -1,5 +1,5 @@
 mypackage.utils package
-=================
+=======================
 
 .. automodule:: mypackage.utils
    :members:

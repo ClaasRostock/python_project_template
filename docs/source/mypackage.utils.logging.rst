@@ -1,5 +1,5 @@
 mypackage.utils.logging module
-========================
+==============================
 
 .. automodule:: mypackage.utils.logging
    :members:
