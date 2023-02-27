@@ -63,7 +63,7 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
     ~~~
     Install mypackage's dependencies:
     ~~~sh
-    $ pip install -r requirements.txt
+    $ pip install -r requirements-dev.txt
     ~~~
 
 ## Meta

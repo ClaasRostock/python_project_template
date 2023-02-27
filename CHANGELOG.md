@@ -8,6 +8,16 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * -/-
 
 
+## [0.1.0] - 2023-02-21
+
+### Changed
+
+* pyproject.toml: Changed ruff configuration to by default allow Uppercase variable names in functions. <br>
+(As this is a very common case in science calculus)
+* README.md: Changed install infos for development setup to pip install requirements-dev.txt (not requirements.txt)
+
+
+
 ## [0.0.1] - 2023-02-21
 
 * Initial release
@@ -41,6 +51,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.0.1...HEAD
+[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.0
 [0.0.1]: https://github.com/AuthorOne/mypackage/releases/tag/v0.0.1
 [mypackage]: https://github.com/AuthorOne/mypackage
