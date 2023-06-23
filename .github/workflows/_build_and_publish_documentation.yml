@@ -24,7 +24,6 @@ jobs:
           cache: 'pip' # cache pip dependencies
       - name: Install dependencies
         run: |
-          pip install git+https://github.com/davidhjp01/signal-temporal-logic@v0.1.3-post1+py311#egg=signal-temporal-logic
           pip install -r requirements-dev.txt
       - name: Print debugging information
         run: |
