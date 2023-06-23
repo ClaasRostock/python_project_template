@@ -8,6 +8,17 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * -/-
 
 
+## [0.1.2] - 2023-06-22
+
+### Changed
+
+* Modularized GitHub workflows
+* requirements-dev.txt: Updated dependencies to latest versions
+* setup.cfg: indicated supported Python versions as py310 and py311 <br>
+  (from formerly py39 and py310)
+* GitHub workflows: changed default Python version from 3.10 to 3.11
+
+
 ## [0.1.0] - 2023-02-21
 
 ### Changed
@@ -51,7 +62,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.0
+[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.0...v0.1.2
+[0.1.0]: https://github.com/AuthorOne/mypackage/releases/tag/v0.0.1...v0.1.0
 [0.0.1]: https://github.com/AuthorOne/mypackage/releases/tag/v0.0.1
 [mypackage]: https://github.com/AuthorOne/mypackage

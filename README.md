@@ -28,7 +28,7 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
 
 ## Development Setup
 
-1. Install Python 3.9 or higher, i.e. [Python 3.9](https://www.python.org/downloads/release/python-3912/) or [Python 3.10](https://www.python.org/downloads/release/python-3104/)
+1. Install Python 3.10 or higher, i.e. [Python 3.10](https://www.python.org/downloads/release/python-3104/) or [Python 3.11](https://www.python.org/downloads/release/python-3114/)
 
 2. Update pip and setuptools:
 

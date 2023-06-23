@@ -19,7 +19,7 @@ jobs:
     pool:
       vmImage: ubuntu-latest
     variables:
-      pythonVersion: '3.10'
+      pythonVersion: '3.11'
     steps:
       - task: UsePythonVersion@0
         inputs:
@@ -35,7 +35,7 @@ jobs:
     pool:
       vmImage: ubuntu-latest
     variables:
-      pythonVersion: '3.10'
+      pythonVersion: '3.11'
     steps:
       - task: UsePythonVersion@0
         inputs:
@@ -45,7 +45,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
         displayName: Install dependencies
-      - script: pip install ruff>=0.0.251
+      - script: pip install ruff>=0.0.275
         displayName: Install ruff
       - script: ruff .
         displayName: Run ruff
@@ -55,7 +55,7 @@ jobs:
     pool:
       vmImage: ubuntu-latest
     variables:
-      pythonVersion: '3.10'
+      pythonVersion: '3.11'
     steps:
       - task: UsePythonVersion@0
         inputs:
@@ -66,7 +66,7 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
         displayName: Install dependencies
-      - script: pip install pyright>=1.1.295
+      - script: pip install pyright>=1.1.314
         displayName: Install pyright
       - script: pyright .
         displayName: Run pyright
@@ -83,6 +83,10 @@ jobs:
           imageName: ubuntu-latest
           pythonVersion: '3.10'
           toxenv: linux-py310
+        linux-py311:
+          imageName: ubuntu-latest
+          pythonVersion: '3.11'
+          toxenv: linux-py311
         windows-py39:
           imageName: windows-latest
           pythonVersion: '3.9'
@@ -91,6 +95,10 @@ jobs:
           imageName: windows-latest
           pythonVersion: '3.10'
           toxenv: windows-py310
+        windows-py311:
+          imageName: windows-latest
+          pythonVersion: '3.11'
+          toxenv: windows-py311
       #   macos-py39:
       #     imageName: macos-latest
       #     pythonVersion: '3.9'
@@ -99,6 +107,10 @@ jobs:
       #     imageName: macos-latest
       #     pythonVersion: '3.10'
       #     toxenv: macos-py310
+      #   macos-py311:
+      #     imageName: macos-latest
+      #     pythonVersion: '3.11'
+      #     toxenv: macos-py311
       # maxParallel: 6
     pool:
       vmImage: $(imageName)
