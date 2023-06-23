@@ -23,7 +23,7 @@ copyright = "2023, Author One"
 author = "Author One, Author Two, Author Three"
 
 # The full version, including alpha/beta/rc tags
-release = "0.1.0"
+release = "0.1.2"
 
 # -- General configuration ---------------------------------------------------
 
