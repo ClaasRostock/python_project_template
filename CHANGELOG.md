@@ -8,6 +8,15 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * -/-
 
 
+## [0.1.3] - 2023-08-24
+
+### Changed
+
+* GitHub workflow publish_release.yml: corrected smaller errors
+* Explicitly removed .env file from remote repository
+* Updated README.md to include guidance on how to create a .env file locally
+
+
 ## [0.1.2] - 2023-06-22
 
 ### Changed
@@ -62,7 +71,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.1.2...HEAD
+[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.0...v0.1.2
 [0.1.0]: https://github.com/AuthorOne/mypackage/releases/tag/v0.0.1...v0.1.0
 [0.0.1]: https://github.com/AuthorOne/mypackage/releases/tag/v0.0.1
