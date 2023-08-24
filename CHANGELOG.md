@@ -15,6 +15,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * GitHub workflow publish_release.yml: corrected smaller errors
 * Explicitly removed .env file from remote repository
 * Updated README.md to include guidance on how to create a .env file locally
+* dependencies: updated packages in requirements-dev.txt to latest versions
 
 
 ## [0.1.2] - 2023-06-22
