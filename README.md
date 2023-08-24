@@ -39,7 +39,7 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
 3. git clone the mypackage repository into your local development directory:
 
     ~~~sh
-    git clone https://github.com/AuthorOne/mypackage path/to/your/dev/mypackage
+    $ git clone https://github.com/AuthorOne/mypackage path/to/your/dev/mypackage
     ~~~
 
 4. In the mypackage root folder:
@@ -59,12 +59,34 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
     ~~~
     Update pip and setuptools:
     ~~~sh
-    $ python -m pip install --upgrade pip setuptools
+    (.venv) $ python -m pip install --upgrade pip setuptools
     ~~~
     Install mypackage's dependencies:
     ~~~sh
-    $ pip install -r requirements-dev.txt
+    (.venv) $ pip install -r requirements-dev.txt
     ~~~
+    <br/>
+
+
+5. Setup your development environment to locate Python source codes:
+
+    Example: Visual Studio Code (Windows) assumes the Python environment is specified in a `.env` file.
+    If you are developing and running the Python code from VSCode,
+    make sure to create a file named .env in your project root folder with below template content.
+    Set the path for `PROJ_DIR` to where your project root folder folder is on your system.
+    ~~~ini
+    PROJ_DIR=<path-to-mypackage-root-dir>
+    PYTHONPATH=${PROJ_DIR}/src
+    ~~~
+    Note: .env is intentionally included in .gitignore, such that changes in the .env file are kept locally
+    and do not get commited and pushed to remote.
+
+
+6. Test that the installation works (in the package root folder):
+    ~~~sh
+    (.venv) $ pytest .
+    ~~~
+
 
 ## Meta
 
@@ -83,9 +105,9 @@ Distributed under the MIT license. See [LICENSE](LICENSE.md) for more informatio
 ## Contributing
 
 1. Fork it (<https://github.com/AuthorOne/mypackage/fork>)
-2. Create your branch (`git checkout -b myBranchName`)
-3. Commit your changes (`git commit -am 'place your commit message here'`)
-4. Push to the branch (`git push origin myBranchName`)
+2. Create your branch (`git checkout -b my-branch-name`)
+3. Commit your changes (`git commit -am 'place a descriptive commit message here'`)
+4. Push to the branch (`git push origin my-branch-name`)
 5. Create a new Pull Request
 
 For your contribution, please make sure you follow the [STYLEGUIDE](STYLEGUIDE.md) before creating the Pull Request.
