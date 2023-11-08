@@ -1,3 +1,4 @@
+import logging
 import os
 from glob import glob
 from pathlib import Path
@@ -10,6 +11,11 @@ from pytest import LogCaptureFixture
 @pytest.fixture(scope="package", autouse=True)
 def chdir():
     os.chdir(Path(__file__).parent.absolute() / "test_working_directory")
+
+
+@pytest.fixture(scope="package", autouse=True)
+def test_dir():
+    return Path(__file__).parent.absolute()
 
 
 output_dirs = [
@@ -40,3 +46,8 @@ def _remove_output_dirs_and_files():
 def setup_logging(caplog: LogCaptureFixture):
     caplog.set_level("INFO")
     caplog.clear()
+
+
+@pytest.fixture(autouse=True)
+def logger():
+    return logging.getLogger()
