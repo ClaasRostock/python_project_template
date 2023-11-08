@@ -10,10 +10,13 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [0.1.4] - 2023-11-08
 
+### Changed
+
+* incorporated latest updates introduced in projects
+
 ### Dependencies
 
 * Updated dependencies to latest versions
-* incorporated latest updates introduced in projects
 
 
 ## [0.1.3] - 2023-08-24
