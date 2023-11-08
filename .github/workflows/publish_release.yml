@@ -7,8 +7,8 @@ on:
       - v*
 
 jobs:
-  # build_package:
-  #   uses: ./.github/workflows/_build_package.yml
+  build_package:
+    uses: ./.github/workflows/_build_package.yml
   # publish_package:
   #   needs:
   #     - build_package

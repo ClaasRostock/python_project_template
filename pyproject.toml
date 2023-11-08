@@ -74,6 +74,7 @@ exclude = [
     "**/__pycache__",
     "./docs/source/conf.py",
     "./src/folder_to_be_ignored",
+    "./venv",
 ]
 extraPaths = ["./src"]
 typeCheckingMode = "basic"
@@ -114,3 +115,4 @@ reportUntypedNamedTuple = "warning"
 testpaths = "tests"
 addopts = "--strict-markers"
 xfail_strict = true
+pythonpath = ["src"]
