@@ -45,7 +45,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
         displayName: Install dependencies
-      - script: pip install ruff==0.1.6
+      - script: pip install ruff==0.1.8
         displayName: Install ruff
       - script: ruff .
         displayName: Run ruff
@@ -66,7 +66,7 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
         displayName: Install dependencies
-      - script: pip install pyright==1.1.336
+      - script: pip install pyright==1.1.338
         displayName: Install pyright
       - script: pyright .
         displayName: Run pyright
