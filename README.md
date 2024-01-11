@@ -114,11 +114,11 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
 
 Copyright (c) 2023 [Author One](https://github.com/AuthorOne)
 
-Author One – [@LinkedIn](https://www.linkedin.com/in/authorone) – author.one@xyz.com
+Author One - [@LinkedIn](https://www.linkedin.com/in/authorone) - author.one@xyz.com
 
-Author Two – [@LinkedIn](https://www.linkedin.com/in/authortwo) – author.two@xyz.com
+Author Two - [@LinkedIn](https://www.linkedin.com/in/authortwo) - author.two@xyz.com
 
-Author Three – [@LinkedIn](https://www.linkedin.com/in/authorthree) – author.three@xyz.com
+Author Three - [@LinkedIn](https://www.linkedin.com/in/authorthree) - author.three@xyz.com
 
 @TODO: (1) Adapt to chosen license (or delete if no license is applied). <br>
 @TODO: (2) Adapt or delete the license file (LICENSE.md) <br>
