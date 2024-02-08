@@ -18,6 +18,10 @@ exclude = [
     "./src/folder_to_be_ignored",
 ]
 src = ["src"]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
 ignore = [
     "E501",  # Line length too long
     "D100",  # Missing docstring in public module
@@ -38,7 +42,6 @@ ignore = [
     # "N815",  # Variable in class scope should not be mixedCase  (uncomment if you want to allow mixedCase variable names in class scope)
     # "N816",  # Variable in global scope should not be mixedCase  (uncomment if you want to allow mixedCase variable names in global scope)
     ]
-line-length = 120
 select = [
     "E",
     "D",
@@ -48,19 +51,18 @@ select = [
     "I",
     "B",
 ]
-target-version = "py39"
 
-[tool.ruff.pep8-naming]
+[tool.ruff.lint.pep8-naming]
 ignore-names = [
     "test_*",
     "setUp",
     "tearDown",
 ]
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "numpy"
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["I001"]
 "./tests/*" = ["D"]
 
