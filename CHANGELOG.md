@@ -8,6 +8,22 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * -/-
 
 
+## [0.1.6] - 2024-02-20
+
+### Changed
+* Moved all project configuration from setup.cfg to pyproject.toml
+* Moved all tox configuration from setup.cfg to tox.ini.
+* Moved pytest configuration from pyproject.toml to pytest.ini
+* Deleted setup.cfg
+
+### Dependencies
+* updated to black[jupyter]==24.1  (from black[jupyter]==23.12)
+* updated to ruff==0.2.1  (from ruff==0.1.8)
+* updated to pyright==1.1.350  (from pyright==1.1.338)
+* updated to sourcery==1.15  (from sourcery==1.14)
+* updated to dictIO>=0.3.1  (from dictIO>=0.2.9)
+
+
 ## [0.1.4] - 2023-11-08
 
 ### Changed
@@ -82,7 +98,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.1.4...HEAD
+[unreleased]: https://github.com/AuthorOne/mypackage/compare/v0.1.6...HEAD
+[0.1.6]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.4...v0.1.6
 [0.1.4]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/AuthorOne/mypackage/releases/tag/v0.1.0...v0.1.2
