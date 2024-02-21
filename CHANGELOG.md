@@ -5,6 +5,9 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
+### Dependencies
+* updated to dictIO>=0.3.3  (from dictIO>=0.3.1)
+
 ### Added
 * README.md : Under `Development Setup`, added a step to install current package in "editable" mode, using the pip install -e option.
 This removes the need to manually add /src to the PythonPath environment variable in order for debugging and tests to work.
