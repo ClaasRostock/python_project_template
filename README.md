@@ -8,7 +8,7 @@ mypackage supports
 ## Installation
 
 ```sh
-pip install .
+pip install mypackage
 ```
 
 ## Usage Example
@@ -83,28 +83,19 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
 
     _Hint:_ If you are unsure which cuda version to indicate in above `pip install .. /cuXXX` command, you can use the shell command `nvidia-smi` on your local system to find out the cuda version supported by the current graphics driver installed on your system. When then generating the `pip install` command with the wizard from the [PyTorch website](https://pytorch.org/get-started/locally/), select the cuda version that matches the major version of what your graphics driver supports (major version must match, minor version may deviate).
 
-    Finally, install mypackage's dependencies. <br>
-    _Note:_ Under Windows, this currently requires you to have installed Visual Studio 2019 "Desktop development with C++" tools.
+    Install mypackage's dependencies. <br>
 
     ```sh
     (.venv) $ pip install -r requirements-dev.txt
     ```
-
     This should return without errors.
 
-5. Setup your development environment to locate Python source codes:
-
-    For example, Visual Studio Code on Windows assumes the Python environment is specified in a `.env` file. <br>
-    If you are developing and running the Python code from VSCode, make sure to create a `.env` file in the mypackage root folder with below content. <br>
-    Set the path for `PROJ_DIR` to where your mypackage folder is on your system. <br>
-    _Note_: `.env` is part of `.gitignore`, such that you do not commit your `.env` file to the repository.
-
-    ```ini
-    PROJ_DIR=<path-to-mypackage-root-dir>
-    PYTHONPATH=${PROJ_DIR}/src
+    Finally, install mypackage itself, yet not as a regular package but as an _editable_ package instead, using the pip install option -e:
+    ```sh
+    (.venv) $ pip install -e .
     ```
 
-6. Test that the installation works (in the mypackage root folder):
+5. Test that the installation works (in the mypackage root folder):
 
     ```sh
     (.venv) $ pytest .
