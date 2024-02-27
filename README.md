@@ -103,7 +103,7 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
 
 ## Meta
 
-Copyright (c) 2023 [Author One](https://github.com/AuthorOne)
+Copyright (c) 2024 [Owner](https://github.com/Owner) . All rights reserved.
 
 Author One - [@LinkedIn](https://www.linkedin.com/in/authorone) - author.one@xyz.com
 
@@ -116,17 +116,19 @@ Author Three - [@LinkedIn](https://www.linkedin.com/in/authorthree) - author.thr
 @TODO: (3) Adapt or delete the license entry in setup.cfg <br>
 Distributed under the MIT license. See [LICENSE](LICENSE.md) for more information.
 
-[https://github.com/AuthorOne/mypackage](https://github.com/AuthorOne/mypackage)
+[https://github.com/Owner/mypackage](https://github.com/Owner/mypackage)
 
 ## Contributing
 
-1. Fork it (<https://github.com/AuthorOne/mypackage/fork>)
-2. Create your branch (`git checkout -b my-branch-name`)
-3. Commit your changes (`git commit -am 'place a descriptive commit message here'`)
-4. Push to the branch (`git push origin my-branch-name`)
-5. Create a new Pull Request in GitHub
+1. Fork it (<https://github.com/Owner/mypackage/fork>)
+2. Create an issue in your GitHub repo
+3. Create your branch based on the issue number and type (`git checkout -b issue-name`)
+4. Evaluate and stage the changes you want to commit (`git add -i`)
+5. Commit your changes (`git commit -am 'place a descriptive commit message here'`)
+6. Push to the branch (`git push origin issue-name`)
+7. Create a new Pull Request in GitHub
 
 For your contribution, please make sure you follow the [STYLEGUIDE](STYLEGUIDE.md) before creating the Pull Request.
 
 <!-- Markdown link & img dfn's -->
-[mypackage_docs]: https://AuthorOne.github.io/mypackage/README.html
+[mypackage_docs]: https://Owner.github.io/mypackage/README.html
