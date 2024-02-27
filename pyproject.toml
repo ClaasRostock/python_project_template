@@ -41,11 +41,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/AuthorOne/mypackage"
-Documentation = "https://AuthorOne.github.io/mypackage/README.html"
-Repository = "https://github.com/AuthorOne/mypackage.git"
-Issues = "https://github.com/AuthorOne/mypackage/issues"
-Changelog = "https://github.com/AuthorOne/mypackage/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/Owner/mypackage"
+Documentation = "https://Owner.github.io/mypackage/README.html"
+Repository = "https://github.com/Owner/mypackage.git"
+Issues = "https://github.com/Owner/mypackage/issues"
+Changelog = "https://github.com/Owner/mypackage/blob/main/CHANGELOG.md"
 
 [project.scripts]
 mypackage = "mypackage.cli.mypackage:main"
