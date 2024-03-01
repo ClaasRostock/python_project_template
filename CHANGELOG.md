@@ -6,6 +6,11 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 ## [Unreleased]
 
 ### Dependencies
+* updated to ruff==0.3.0  (from ruff==0.2.1)
+* updated to pyright==1.1.352  (from pyright==1.1.350)
+* updated to dictIO>=0.3.3  (from dictIO>=0.3.1)
+
+### Dependencies
 * updated to black[jupyter]==24.1  (from black[jupyter]==23.12)
 * updated to version: '==24.1'  (from version: '==23.12')
 * updated to ruff==0.2.1  (from ruff==0.1.8)
