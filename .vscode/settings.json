@@ -1,5 +1,4 @@
 {
-    "python.terminal.activateEnvInCurrentTerminal": true,
     "python.languageServer": "Pylance",
     "ruff.importStrategy": "fromEnvironment",
     "editor.formatOnSave": true,
@@ -21,6 +20,9 @@
     "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.inlayHints.functionReturnTypes": false,
     "python.analysis.inlayHints.pytestParameters": true,
+    "python.terminal.executeInFileDir": true,
+    "python.terminal.activateEnvironment": false,
+    "python.terminal.activateEnvInCurrentTerminal": false,
     "python.analysis.packageIndexDepths": [
         {
             "name": "pandas",
@@ -38,5 +40,4 @@
             "includeAllSymbols": true,
         },
     ],
-    "python.terminal.executeInFileDir": true,
 }
