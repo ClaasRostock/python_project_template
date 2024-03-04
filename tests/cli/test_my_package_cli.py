@@ -6,17 +6,16 @@ from pathlib import Path
 from typing import List, Union
 
 import pytest
+from my_package.cli import my_package
+from my_package.cli.my_package import _argparser, main
 from pytest import MonkeyPatch
-
-from mypackage.cli import mypackage
-from mypackage.cli.mypackage import _argparser, main
 
 # *****Test commandline interface (CLI)************************************************************
 
 
 @dataclass()
 class CliArgs:
-    # Expected default values for the CLI arguments when mypackage gets called via the commandline
+    # Expected default values for the CLI arguments when my-package gets called via the commandline
     quiet: bool = False
     verbose: bool = False
     log: Union[str, None] = None
@@ -51,7 +50,7 @@ def test_cli(
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["mypackage"] + inputs)
+    monkeypatch.setattr(sys, "argv", ["my-package"] + inputs)
     parser = _argparser()
     # Execute
     if isinstance(expected, CliArgs):
@@ -113,7 +112,7 @@ def test_logging_configuration(
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["mypackage"] + inputs)
+    monkeypatch.setattr(sys, "argv", ["my-package"] + inputs)
     args: ConfigureLoggingArgs = ConfigureLoggingArgs()
 
     def fake_configure_logging(
@@ -131,8 +130,8 @@ def test_logging_configuration(
     ):
         pass
 
-    monkeypatch.setattr(mypackage, "configure_logging", fake_configure_logging)
-    monkeypatch.setattr(mypackage, "run", fake_run)
+    monkeypatch.setattr(my_package, "configure_logging", fake_configure_logging)
+    monkeypatch.setattr(my_package, "run", fake_run)
     # Execute
     if isinstance(expected, ConfigureLoggingArgs):
         args_expected: ConfigureLoggingArgs = expected
@@ -176,7 +175,7 @@ def test_api_invokation(
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["mypackage"] + inputs)
+    monkeypatch.setattr(sys, "argv", ["my-package"] + inputs)
     args: ApiArgs = ApiArgs()
 
     def fake_run(
@@ -186,7 +185,7 @@ def test_api_invokation(
         args.config_file = config_file
         args.option = option
 
-    monkeypatch.setattr(mypackage, "run", fake_run)
+    monkeypatch.setattr(my_package, "run", fake_run)
     # Execute
     if isinstance(expected, ApiArgs):
         args_expected: ApiArgs = expected

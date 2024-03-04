@@ -1,7 +1,7 @@
-mypackage.utils package
+my_package.utils package
 =======================
 
-.. automodule:: mypackage.utils
+.. automodule:: my_package.utils
    :members:
    :undoc-members:
    :show-inheritance:
@@ -12,4 +12,4 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   mypackage.utils.logging
+   my_package.utils.logging

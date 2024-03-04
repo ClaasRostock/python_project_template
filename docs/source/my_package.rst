@@ -1,7 +1,7 @@
-mypackage package
+my_package package
 =================
 
-.. automodule:: mypackage
+.. automodule:: my_package
    :members:
    :undoc-members:
    :show-inheritance:
@@ -12,9 +12,9 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   mypackage.subpackage1
-   mypackage.subpackage2
-   mypackage.utils
+   my_package.subpackage1
+   my_package.subpackage2
+   my_package.utils
 
 Submodules
 ----------
@@ -22,4 +22,4 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   mypackage.api
+   my_package.api

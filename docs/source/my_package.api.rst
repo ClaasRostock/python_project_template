@@ -1,7 +1,7 @@
-mypackage.api module
+my_package.api module
 ====================
 
-.. automodule:: mypackage.api
+.. automodule:: my_package.api
    :members:
    :undoc-members:
    :show-inheritance:

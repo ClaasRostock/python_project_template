@@ -1,3 +1,3 @@
 .. sphinx_argparse_cli::
-   :module: mypackage.cli.mypackage
+   :module: my_package.cli.my_package
    :func: _argparser
