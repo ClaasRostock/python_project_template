@@ -29,7 +29,9 @@ jobs:
           python-version: '3.11'
           cache: 'pip' # cache pip dependencies
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
       - name: Install ruff
         run: pip install ruff==0.3.0
       - name: Run ruff check
