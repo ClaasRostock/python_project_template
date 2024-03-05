@@ -2,8 +2,9 @@
 import contextlib
 
 import pytest
-from my_package.subpackage2.module2 import str_to_int
 from pytest import LogCaptureFixture
+
+from my_package.subpackage2.module2 import str_to_int
 
 
 @pytest.mark.parametrize(

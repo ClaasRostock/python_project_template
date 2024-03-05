@@ -2,8 +2,9 @@
 from pathlib import Path
 
 import pytest
-from my_package.api import MyPackageProcess, run
 from pytest import LogCaptureFixture
+
+from my_package.api import MyPackageProcess, run
 
 
 def test_file_not_found_exception():
