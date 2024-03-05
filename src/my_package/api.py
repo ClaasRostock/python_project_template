@@ -5,10 +5,10 @@ from typing import Union
 
 from dictIO import DictReader
 
-from mypackage.subpackage1.module1 import int_to_str
-from mypackage.subpackage2.module2 import str_to_int
+from my_package.subpackage1.module1 import int_to_str
+from my_package.subpackage2.module2 import str_to_int
 
-__ALL__ = ["run_mypackage", "MyPackageProcess"]
+__ALL__ = ["run", "MyPackageProcess"]
 
 logger = logging.getLogger(__name__)
 
@@ -17,14 +17,14 @@ def run(
     config_file: Union[str, os.PathLike[str]],
     option: bool = False,
 ):
-    """Run the mypackage process.
+    """Run the my-package process.
 
-    Run the mypackage process and .. (long description).
+    Run the my-package process and .. (long description).
 
     Parameters
     ----------
     config_file : Union[str, os.PathLike[str]]
-        file containing the mypackage configuration
+        file containing the my-package configuration
     option : bool, optional
         if True, does something differently, by default False
 
@@ -39,11 +39,11 @@ def run(
 
     # Check whether config file exists
     if not config_file.exists():
-        logger.error(f"run_mypackage: File {config_file} not found.")
+        logger.error(f"run: File {config_file} not found.")
         raise FileNotFoundError(config_file)
 
     if option:
-        logger.info("option is True. mypackage process will do something differently.")
+        logger.info("option is True. my-package process will do something differently.")
 
     process = MyPackageProcess(config_file)
     process.run()
@@ -52,6 +52,8 @@ def run(
 
 
 class MyPackageProcess:
+    """Top level class encapsulating the my-package process."""
+
     def __init__(
         self,
         config_file: Path,
@@ -64,12 +66,12 @@ class MyPackageProcess:
         return
 
     def run(self):
-        """Run the mypackage process.
+        """Run the my-package process.
 
-        Runs the mypackage process in a self-terminated loop.
+        Runs the my-package process in a self-terminated loop.
         """
 
-        # Run mypackage process until termination is flagged
+        # Run my-package process until termination is flagged
         while not self.terminate:
             self._run_process()
             self.terminate = self._run_number >= self._max_number_of_runs
@@ -108,7 +110,7 @@ class MyPackageProcess:
         return
 
     def _run_process(self):
-        """Execute a single run of the mypackage process."""
+        """Execute a single run of the my-package process."""
         self._run_number += 1
 
         logger.info(f"Start run {self._run_number}")

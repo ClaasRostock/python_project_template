@@ -1,7 +1,7 @@
-mypackage.subpackage2.module2 module
+my_package.subpackage1.module1 module
 ====================================
 
-.. automodule:: mypackage.subpackage2.module2
+.. automodule:: my_package.subpackage1.module1
    :members:
    :undoc-members:
    :show-inheritance:

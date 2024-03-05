@@ -1,7 +1,7 @@
-mypackage.utils.logging module
+my_package.utils.logging module
 ==============================
 
-.. automodule:: mypackage.utils.logging
+.. automodule:: my_package.utils.logging
    :members:
    :undoc-members:
    :show-inheritance:

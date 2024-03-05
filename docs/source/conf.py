@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath("../../src"))
 
 # -- Project information -----------------------------------------------------
 
-project = "mypackage"
+project = "my-package"
 copyright = "2024, Owner. All rights reserved."
 author = "Author One, Author Two, Author Three"
 
@@ -58,7 +58,7 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = "furo"
-html_logo = "_static/mypackage.svg"
+html_logo = "_static/my_package.svg"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

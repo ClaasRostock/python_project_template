@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 from pytest import LogCaptureFixture
 
-from mypackage.api import MyPackageProcess, run
+from my_package.api import MyPackageProcess, run
 
 
 def test_file_not_found_exception():
@@ -28,7 +28,7 @@ def test_run_with_option(caplog: LogCaptureFixture):
     # Prepare
     config_file = Path("test_config_file")
     log_level_expected = "INFO"
-    log_message_expected = "option is True. mypackage process will do something differently."
+    log_message_expected = "option is True. my-package process will do something differently."
     caplog.clear()
     # Execute
     run(config_file=config_file, option=True)

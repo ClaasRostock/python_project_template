@@ -1,14 +1,14 @@
-# mypackage
-mypackage is an example package
+# my-package
+my-package is an example package
 
-mypackage supports
+my-package supports
 * ..
 
 
 ## Installation
 
 ```sh
-pip install mypackage
+pip install my-package
 ```
 
 ## Usage Example
@@ -16,16 +16,16 @@ pip install mypackage
 API:
 
 ```py
-from mypackage import ...
+from my_package import ...
 ```
 
 CLI:
 
 ```sh
-mypackage ...
+my-package ...
 ```
 
-_For more examples and usage, please refer to mypackage's [documentation][mypackage_docs]._
+_For more examples and usage, please refer to my-package's [documentation][my_package_docs]._
 
 ## Development Setup
 
@@ -37,13 +37,13 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
     python -m pip install --upgrade pip setuptools
     ```
 
-3. git clone the mypackage repository into your local development directory:
+3. git clone the my-package repository into your local development directory:
 
     ```sh
-    git clone https://github.com/dnv-innersource/mypackage path/to/your/dev/mypackage
+    git clone https://github.com/dnv-innersource/my-package path/to/your/dev/my-package
     ```
 
-4. In the mypackage root folder:
+4. In the my-package root folder:
 
     Create a Python virtual environment:
 
@@ -83,19 +83,19 @@ _For more examples and usage, please refer to mypackage's [documentation][mypack
 
     _Hint:_ If you are unsure which cuda version to indicate in above `pip install .. /cuXXX` command, you can use the shell command `nvidia-smi` on your local system to find out the cuda version supported by the current graphics driver installed on your system. When then generating the `pip install` command with the wizard from the [PyTorch website](https://pytorch.org/get-started/locally/), select the cuda version that matches the major version of what your graphics driver supports (major version must match, minor version may deviate).
 
-    Install mypackage's dependencies. <br>
+    Install my-package's dependencies. <br>
 
     ```sh
     (.venv) $ pip install -r requirements-dev.txt
     ```
     This should return without errors.
 
-    Finally, install mypackage itself, yet not as a regular package but as an _editable_ package instead, using the pip install option -e:
+    Finally, install my-package itself, yet not as a regular package but as an _editable_ package instead, using the pip install option -e:
     ```sh
     (.venv) $ pip install -e .
     ```
 
-5. Test that the installation works (in the mypackage root folder):
+5. Test that the installation works (in the my-package root folder):
 
     ```sh
     (.venv) $ pytest .
@@ -116,11 +116,11 @@ Author Three - [@LinkedIn](https://www.linkedin.com/in/authorthree) - author.thr
 @TODO: (3) Adapt or delete the license entry in setup.cfg <br>
 Distributed under the MIT license. See [LICENSE](LICENSE.md) for more information.
 
-[https://github.com/Owner/mypackage](https://github.com/Owner/mypackage)
+[https://github.com/Owner/my-package](https://github.com/Owner/my-package)
 
 ## Contributing
 
-1. Fork it (<https://github.com/Owner/mypackage/fork>)
+1. Fork it (<https://github.com/Owner/my-package/fork>)
 2. Create an issue in your GitHub repo
 3. Create your branch based on the issue number and type (`git checkout -b issue-name`)
 4. Evaluate and stage the changes you want to commit (`git add -i`)
@@ -131,4 +131,4 @@ Distributed under the MIT license. See [LICENSE](LICENSE.md) for more informatio
 For your contribution, please make sure you follow the [STYLEGUIDE](STYLEGUIDE.md) before creating the Pull Request.
 
 <!-- Markdown link & img dfn's -->
-[mypackage_docs]: https://Owner.github.io/mypackage/README.html
+[my_package_docs]: https://Owner.github.io/my-package/README.html
