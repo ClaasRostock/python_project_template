@@ -6,29 +6,45 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 ## [Unreleased]
 
 ### Dependencies
-* updated to ruff==0.5.1  (from ruff==0.4.2)
-* updated to pyright==1.1.371  (from pyright==1.1.360)
-* updated to setup-python@v5  (from setup-python@v4)
-* updated to actions-gh-pages@v4  (from actions-gh-pages@v3)
-* updated to upload-artifact@v4  (from upload-artifact@v3)
+* updated to black[jupyter]==24.4  (from black[jupyter]==24.1)
+* updated to ruff==0.5.1  (from ruff==0.5.1)
+* updated to pyright==1.1.371  (from pyright==1.1.371)
+* updated to sourcery==1.21  (from sourcery==1.16)
+* updated to dictIO>=0.3.4  (from dictIO>=0.3.4)
+* updated to pytest>=8.2  (from pytest>=8.2)
+* updated to pytest-cov>=5.0  (from pytest-cov>=5.0)
+* updated to Sphinx>=7.3  (from Sphinx>=7.3)
+* updated to sphinx-argparse-cli>=1.16  (from sphinx-argparse-cli>=1.15)
+* updated to myst-parser>=3.0  (from myst-parser>=3.0)
+* updated to furo>=2024.5  (from furo>=2024.4)
+* updated to setup-python@v5  (from setup-python@v5)
+* updated to actions-gh-pages@v4  (from actions-gh-pages@v4)
+* updated to upload-artifact@v4  (from upload-artifact@v4)
 
 ### Dependencies
-* updated to ruff==0.4.2  (from ruff==0.3.0)
-* updated to pyright==1.1.360  (from pyright==1.1.352)
-* updated to sourcery==1.16  (from sourcery==1.15)
-* updated to pytest>=8.2  (from pytest>=7.4)
-* updated to pytest-cov>=5.0  (from pytest-cov>=4.1)
-* updated to Sphinx>=7.3  (from Sphinx>=7.2)
-* updated to sphinx-argparse-cli>=1.15  (from sphinx-argparse-cli>=1.11)
-* updated to myst-parser>=3.0  (from myst-parser>=2.0)
-* updated to furo>=2024.4  (from furo>=2023.9.10)
+* updated to ruff==0.5.1  (from ruff==0.5.1)
+* updated to pyright==1.1.371  (from pyright==1.1.371)
+* updated to setup-python@v5  (from setup-python@v5)
+* updated to actions-gh-pages@v4  (from actions-gh-pages@v4)
+* updated to upload-artifact@v4  (from upload-artifact@v4)
+
+### Dependencies
+* updated to ruff==0.5.1  (from ruff==0.5.1)
+* updated to pyright==1.1.371  (from pyright==1.1.371)
+* updated to sourcery==1.21  (from sourcery==1.21)
+* updated to pytest>=8.2  (from pytest>=8.2)
+* updated to pytest-cov>=5.0  (from pytest-cov>=5.0)
+* updated to Sphinx>=7.3  (from Sphinx>=7.3)
+* updated to sphinx-argparse-cli>=1.16  (from sphinx-argparse-cli>=1.16)
+* updated to myst-parser>=3.0  (from myst-parser>=3.0)
+* updated to furo>=2024.5  (from furo>=2024.5)
 
 ### Changed
 * replaced black formatter with ruff formatter
 
 ### Dependencies
-* updated to ruff==0.3.0  (from ruff==0.2.1)
-* updated to pyright==1.1.352  (from pyright==1.1.350)
+* updated to ruff==0.5.1  (from ruff==0.5.1)
+* updated to pyright==1.1.371  (from pyright==1.1.371)
 * removed black
 
 ### Changed
@@ -37,7 +53,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * VS Code settings: Turned off automatic venv activation
 
 ### Dependencies
-* updated to dictIO>=0.3.3  (from dictIO>=0.3.1)
+* updated to dictIO>=0.3.4  (from dictIO>=0.3.4)
 
 ### Added
 * README.md : Under `Development Setup`, added a step to install current package in "editable" mode, using the pip install -e option.
@@ -56,11 +72,11 @@ This removes the need to manually add /src to the PythonPath environment variabl
 * Deleted setup.cfg
 
 ### Dependencies
-* updated to black[jupyter]==24.1  (from black[jupyter]==23.12)
-* updated to ruff==0.2.1  (from ruff==0.1.8)
-* updated to pyright==1.1.350  (from pyright==1.1.338)
-* updated to sourcery==1.15  (from sourcery==1.14)
-* updated to dictIO>=0.3.1  (from dictIO>=0.2.9)
+* updated to black[jupyter]==24.4  (from black[jupyter]==24.4)
+* updated to ruff==0.5.1  (from ruff==0.5.1)
+* updated to pyright==1.1.371  (from pyright==1.1.371)
+* updated to sourcery==1.21  (from sourcery==1.21)
+* updated to dictIO>=0.3.4  (from dictIO>=0.3.4)
 
 
 ## [0.1.4] - 2023-11-08
