@@ -15,7 +15,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 ### Dependencies
 * updated to ruff==0.5.1  (from ruff==0.5.1)
 * updated to pyright==1.1.371  (from pyright==1.1.371)
-* updated to sourcery==1.16  (from sourcery==1.15)
+* updated to sourcery==1.21  (from sourcery==1.21)
 * updated to pytest>=8.2  (from pytest>=7.4)
 * updated to pytest-cov>=5.0  (from pytest-cov>=4.1)
 * updated to Sphinx>=7.3  (from Sphinx>=7.2)
@@ -59,7 +59,7 @@ This removes the need to manually add /src to the PythonPath environment variabl
 * updated to black[jupyter]==24.4  (from black[jupyter]==24.4)
 * updated to ruff==0.5.1  (from ruff==0.5.1)
 * updated to pyright==1.1.371  (from pyright==1.1.371)
-* updated to sourcery==1.15  (from sourcery==1.14)
+* updated to sourcery==1.21  (from sourcery==1.21)
 * updated to dictIO>=0.3.1  (from dictIO>=0.2.9)
 
 
