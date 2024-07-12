@@ -16,7 +16,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * updated to ruff==0.5.1  (from ruff==0.5.1)
 * updated to pyright==1.1.371  (from pyright==1.1.371)
 * updated to sourcery==1.21  (from sourcery==1.21)
-* updated to pytest>=8.2  (from pytest>=7.4)
+* updated to pytest>=8.2  (from pytest>=8.2)
 * updated to pytest-cov>=5.0  (from pytest-cov>=4.1)
 * updated to Sphinx>=7.3  (from Sphinx>=7.2)
 * updated to sphinx-argparse-cli>=1.15  (from sphinx-argparse-cli>=1.11)
