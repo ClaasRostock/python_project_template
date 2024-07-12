@@ -37,7 +37,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * VS Code settings: Turned off automatic venv activation
 
 ### Dependencies
-* updated to dictIO>=0.3.3  (from dictIO>=0.3.1)
+* updated to dictIO>=0.3.4  (from dictIO>=0.3.4)
 
 ### Added
 * README.md : Under `Development Setup`, added a step to install current package in "editable" mode, using the pip install -e option.
@@ -60,7 +60,7 @@ This removes the need to manually add /src to the PythonPath environment variabl
 * updated to ruff==0.5.1  (from ruff==0.5.1)
 * updated to pyright==1.1.371  (from pyright==1.1.371)
 * updated to sourcery==1.21  (from sourcery==1.21)
-* updated to dictIO>=0.3.1  (from dictIO>=0.2.9)
+* updated to dictIO>=0.3.4  (from dictIO>=0.3.4)
 
 
 ## [0.1.4] - 2023-11-08
