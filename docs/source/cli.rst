@@ -4,4 +4,4 @@ CLI Documentation
 .. toctree::
    :maxdepth: 2
 
-   cli.mypackage
+   cli.my_package

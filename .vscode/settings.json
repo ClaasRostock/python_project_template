@@ -1,16 +1,18 @@
 {
-    "terminal.integrated.env.windows": {
-        "PYTHONPATH": "${workspaceFolder}/src"
-    },
-    "python.terminal.activateEnvInCurrentTerminal": true,
     "python.languageServer": "Pylance",
-    "ruff.importStrategy": "fromEnvironment",
     "editor.formatOnSave": true,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit",
+    },
     "[python]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
+            "source.fixAll": "always",
+            "source.organizeImports": "explicit",
         },
+        "editor.defaultFormatter": "charliermarsh.ruff",
     },
     "autoDocstring.docstringFormat": "numpy",
     "python.testing.unittestEnabled": false,
@@ -24,6 +26,9 @@
     "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.inlayHints.functionReturnTypes": false,
     "python.analysis.inlayHints.pytestParameters": true,
+    "python.terminal.executeInFileDir": true,
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": false,
     "python.analysis.packageIndexDepths": [
         {
             "name": "pandas",
@@ -41,5 +46,7 @@
             "includeAllSymbols": true,
         },
     ],
-    "python.terminal.executeInFileDir": true,
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    "mypy-type-checker.reportingScope": "workspace",
+    "mypy-type-checker.preferDaemon": false,
 }
