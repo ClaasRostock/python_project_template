@@ -3,10 +3,8 @@ import sys
 from argparse import ArgumentError
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import List, Union
 
 import pytest
-from pytest import MonkeyPatch
 
 from my_package.cli import my_package
 from my_package.cli.my_package import _argparser, main
@@ -19,9 +17,9 @@ class CliArgs:
     # Expected default values for the CLI arguments when my-package gets called via the commandline
     quiet: bool = False
     verbose: bool = False
-    log: Union[str, None] = None
+    log: str | None = None
     log_level: str = field(default_factory=lambda: "WARNING")
-    config_file: Union[str, None] = field(default_factory=lambda: "test_config_file")  # noqa: N815
+    config_file: str | None = field(default_factory=lambda: "test_config_file")
     option: bool = False
 
 
@@ -44,14 +42,14 @@ class CliArgs:
     ],
 )
 def test_cli(
-    inputs: List[str],
-    expected: Union[CliArgs, type],
-    monkeypatch: MonkeyPatch,
+    inputs: list[str],
+    expected: CliArgs | type,
+    monkeypatch: pytest.MonkeyPatch,
 ):
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["my-package"] + inputs)
+    monkeypatch.setattr(sys, "argv", ["my-package", *inputs])
     parser = _argparser()
     # Execute
     if isinstance(expected, CliArgs):
@@ -66,7 +64,7 @@ def test_cli(
         with pytest.raises((exception, SystemExit)):
             args = parser.parse_args()
     else:
-        raise AssertionError()
+        raise TypeError
 
 
 # *****Ensure the CLI correctly configures logging*************************************************
@@ -76,7 +74,7 @@ def test_cli(
 class ConfigureLoggingArgs:
     # Values that main() is expected to pass to ConfigureLogging() by default when configuring the logging
     log_level_console: str = field(default_factory=lambda: "WARNING")
-    log_file: Union[Path, None] = None
+    log_file: Path | None = None
     log_level_file: str = field(default_factory=lambda: "WARNING")
 
 
@@ -106,19 +104,19 @@ class ConfigureLoggingArgs:
     ],
 )
 def test_logging_configuration(
-    inputs: List[str],
-    expected: Union[ConfigureLoggingArgs, type],
-    monkeypatch: MonkeyPatch,
+    inputs: list[str],
+    expected: ConfigureLoggingArgs | type,
+    monkeypatch: pytest.MonkeyPatch,
 ):
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["my-package"] + inputs)
+    monkeypatch.setattr(sys, "argv", ["my-package", *inputs])
     args: ConfigureLoggingArgs = ConfigureLoggingArgs()
 
     def fake_configure_logging(
         log_level_console: str,
-        log_file: Union[Path, None],
+        log_file: Path | None,
         log_level_file: str,
     ):
         args.log_level_console = log_level_console
@@ -127,6 +125,7 @@ def test_logging_configuration(
 
     def fake_run(
         config_file: Path,
+        *,
         option: bool,
     ):
         pass
@@ -146,7 +145,7 @@ def test_logging_configuration(
         with pytest.raises((exception, SystemExit)):
             main()
     else:
-        raise AssertionError()
+        raise TypeError
 
 
 # *****Ensure the CLI correctly invokes the API****************************************************
@@ -169,18 +168,19 @@ class ApiArgs:
     ],
 )
 def test_api_invokation(
-    inputs: List[str],
-    expected: Union[ApiArgs, type],
-    monkeypatch: MonkeyPatch,
+    inputs: list[str],
+    expected: ApiArgs | type,
+    monkeypatch: pytest.MonkeyPatch,
 ):
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["my-package"] + inputs)
+    monkeypatch.setattr(sys, "argv", ["my-package", *inputs])
     args: ApiArgs = ApiArgs()
 
     def fake_run(
         config_file: Path,
+        *,
         option: bool = False,
     ):
         args.config_file = config_file
@@ -200,4 +200,4 @@ def test_api_invokation(
         with pytest.raises((exception, SystemExit)):
             main()
     else:
-        raise AssertionError()
+        raise TypeError

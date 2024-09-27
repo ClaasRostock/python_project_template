@@ -5,51 +5,38 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
-### Dependencies
-* Updated to download-artifact@v4  (from download-artifact@v3)
+-/-
 
-### Dependencies
-* GitHub workflows: Replaced pip install tox with pip install tox-uv
-* GitHub workflows: Removed cache: 'pip' for tox-uv compatibility
-* GitHub workflows: Install dependencies: change singleline run statements to multiline run statements
-* GitHub workflows: Add step to install 'uv' package
-* GitHub workflows: Add step to install 'uv' package
-* GitHub workflows: Install dependencies: change from 'pip install' to 'uv pip install'
-* GitHub workflow _test_future.yml : updated Python version to 3.13.0-alpha - 3.13.0
-* GitHub workflow _test_future.yml : updated name of test job to 'test313'
 
-### Dependencies
-* updated to ruff==0.5.1  (from ruff==0.4.2)
-* updated to pyright==1.1.371  (from pyright==1.1.360)
-* updated to setup-python@v5  (from setup-python@v4)
-* updated to actions-gh-pages@v4  (from actions-gh-pages@v3)
-* updated to upload-artifact@v4  (from upload-artifact@v3)
-* updated to black[jupyter]==24.4  (from black[jupyter]==23.12)
-* updated to sourcery==1.21  (from sourcery==1.16)
-* updated to dictIO>=0.3.4  (from dictIO>=0.3.3)
+## [0.1.9] - 2024-09-27
 
 ### Changed
-* replaced black formatter with ruff formatter
-
-### Dependencies
-* updated to ruff==0.3.0  (from ruff==0.2.1)
-* updated to pyright==1.1.352  (from pyright==1.1.350)
-* removed black
-
-### Changed
+* Changed from `pip`/`tox` to `uv` as package manager
+* README.md : Completely rewrote section "Development Setup", introducing `uv` as package manager.
 * Changed publishing workflow to use OpenID Connect (Trusted Publisher Management) when publishing to PyPI
 * Updated copyright statement
 * VS Code settings: Turned off automatic venv activation
-
-### Dependencies
-* updated to dictIO>=0.3.3  (from dictIO>=0.3.1)
-
-### Added
-* README.md : Under `Development Setup`, added a step to install current package in "editable" mode, using the pip install -e option.
-This removes the need to manually add /src to the PythonPath environment variable in order for debugging and tests to work.
+* replaced black formatter with ruff formatter
+* removed black
 
 ### Removed
-* VS Code settings: Removed the setting which added the /src folder to PythonPath. This is no longer necessary. Installing the project itself as a package in "editable" mode, using the pip install -e option, solves the issue and removes the need to manually add /src to the PythonPath environment variable.
+* VS Code settings: Removed the setting which added the /src folder to PythonPath. This is no longer necessary. `uv` installs the project itself as a package in "editable" mode, which removes the need to manually add /src to the PythonPath environment variable.
+
+### GitHub workflows
+* (all workflows): Adapted to use `uv` as package manager
+* _test_future.yml : updated Python version to 3.13.0-alpha - 3.13.0
+* _test_future.yml : updated name of test job to 'test313'
+
+### Dependencies
+* updated to ruff>=0.6.3  (from ruff==0.2.1)
+* updated to pyright>=1.1.378  (from pyright==1.1.350)
+* updated to setup-python@v5  (from setup-python@v4)
+* updated to actions-gh-pages@v4  (from actions-gh-pages@v3)
+* updated to upload-artifact@v4  (from upload-artifact@v3)
+* updated to download-artifact@v4  (from download-artifact@v3)
+* updated to sourcery>=1.22  (from sourcery==1.16)
+* updated to dictIO>=0.3.4  (from dictIO>=0.3.1)
+* removed black
 
 
 ## [0.1.6] - 2024-02-20
@@ -142,11 +129,12 @@ This removes the need to manually add /src to the PythonPath environment variabl
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/Owner/my-package/compare/v0.1.6...HEAD
-[0.1.6]: https://github.com/Owner/my-package/releases/tag/v0.1.4...v0.1.6
-[0.1.4]: https://github.com/Owner/my-package/releases/tag/v0.1.3...v0.1.4
-[0.1.3]: https://github.com/Owner/my-package/releases/tag/v0.1.2...v0.1.3
-[0.1.2]: https://github.com/Owner/my-package/releases/tag/v0.1.0...v0.1.2
-[0.1.0]: https://github.com/Owner/my-package/releases/tag/v0.0.1...v0.1.0
-[0.0.1]: https://github.com/Owner/my-package/releases/tag/v0.0.1
-[my-package]: https://github.com/Owner/my-package
+[unreleased]: https://github.com/owner/my-package/compare/v0.1.9...HEAD
+[0.1.9]: https://github.com/owner/my-package/releases/tag/v0.1.6...v0.1.9
+[0.1.6]: https://github.com/owner/my-package/releases/tag/v0.1.4...v0.1.6
+[0.1.4]: https://github.com/owner/my-package/releases/tag/v0.1.3...v0.1.4
+[0.1.3]: https://github.com/owner/my-package/releases/tag/v0.1.2...v0.1.3
+[0.1.2]: https://github.com/owner/my-package/releases/tag/v0.1.0...v0.1.2
+[0.1.0]: https://github.com/owner/my-package/releases/tag/v0.0.1...v0.1.0
+[0.0.1]: https://github.com/owner/my-package/releases/tag/v0.0.1
+[my-package]: https://github.com/owner/my-package

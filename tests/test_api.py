@@ -2,7 +2,6 @@
 from pathlib import Path
 
 import pytest
-from pytest import LogCaptureFixture
 
 from my_package.api import MyPackageProcess, run
 
@@ -12,7 +11,7 @@ def test_file_not_found_exception():
     config_file = Path("this_file_does_not_exist")
     # Execute and Assert
     with pytest.raises(FileNotFoundError):
-        _ = run(config_file)
+        run(config_file)
 
 
 def test_run():
@@ -24,7 +23,7 @@ def test_run():
     # (nothin to assert. Assertion is that no exception is thrown.)
 
 
-def test_run_with_option(caplog: LogCaptureFixture):
+def test_run_with_option(caplog: pytest.LogCaptureFixture):
     # Prepare
     config_file = Path("test_config_file")
     log_level_expected = "INFO"
@@ -67,4 +66,3 @@ class TestMyPackageProcess:
 @pytest.mark.skip(reason="To be implemented")
 def test_example_skip():
     """Example of a test skipped because it is not yet implemented."""
-    pass

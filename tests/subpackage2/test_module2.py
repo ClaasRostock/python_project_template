@@ -2,7 +2,6 @@
 import contextlib
 
 import pytest
-from pytest import LogCaptureFixture
 
 from my_package.subpackage2.module2 import str_to_int
 
@@ -43,7 +42,7 @@ def test_str_to_int_exception():
         _ = str_to_int(str_in)
 
 
-def test_str_to_int_exception_log_message(caplog: LogCaptureFixture):
+def test_str_to_int_exception_log_message(caplog: pytest.LogCaptureFixture):
     # Prepare
     str_in: str = "3.0"
     log_level_expected = "ERROR"
