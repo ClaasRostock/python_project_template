@@ -107,7 +107,7 @@ raises-require-match-for = [
 ]
 # `stubs` specific ignores
 "stubs/**/*" = [
-    "D",       # Docstring violations
+    "D",       # Missing docstrings
     "ERA001",  # Found commented-out code
     "SLF001",  # Private member accessed
     "F405",    # {name} may be undefined, or defined from star imports: {module}
