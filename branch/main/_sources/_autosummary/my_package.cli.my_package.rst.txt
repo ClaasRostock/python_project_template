@@ -1,0 +1,13 @@
+my\_package.cli.my\_package
+===========================
+
+.. automodule:: my_package.cli.my_package
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      main
+   

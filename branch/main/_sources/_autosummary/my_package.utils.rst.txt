@@ -1,0 +1,14 @@
+my\_package.utils
+=================
+
+.. automodule:: my_package.utils
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module.rst
+   :recursive:
+
+   logging

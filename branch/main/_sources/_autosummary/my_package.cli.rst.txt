@@ -1,0 +1,14 @@
+my\_package.cli
+===============
+
+.. automodule:: my_package.cli
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module.rst
+   :recursive:
+
+   my_package
