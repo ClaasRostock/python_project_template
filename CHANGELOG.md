@@ -5,6 +5,21 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
+### Dependencies
+* Updated to ruff>=0.8.3  (from ruff>=0.6.3)
+* Updated to pyright>=1.1.390  (from pyright>=1.1.378)
+* Updated to sourcery>=1.27  (from sourcery>=1.22)
+* Updated to jupyter>=1.1  (from jupyter>=1.0)
+* Updated to dictIO>=0.4.0  (from dictIO>=0.3.4)
+* Updated to pytest-cov>=6.0  (from pytest-cov>=5.0)
+* Updated to Sphinx>=8.1  (from Sphinx>=8.0)
+* Updated to sphinx-argparse-cli>=1.19  (from sphinx-argparse-cli>=1.17)
+* Updated to sphinx-autodoc-typehints>=2.5  (from sphinx-autodoc-typehints>=2.2)
+* Updated to pre-commit>=4.0  (from pre-commit>=3.8)
+* Updated to mypy>=1.13  (from mypy>=1.11.1)
+* Updated to types-tqdm>=4.67  (from types-tqdm>=4.66)
+* Updated to types-psutil>=6.1  (from types-psutil>=6.0)
+
 -/-
 
 
