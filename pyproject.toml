@@ -90,7 +90,7 @@ dev-dependencies = [
     "jupyter-client>=8.6",
     "pandas-stubs>=2.2",
     "types-tqdm>=4.67",
-    "types-psutil>=6.0",
+    "types-psutil>=6.1",
 ]
 find-links = [
     "https://download.pytorch.org/whl/torch",
