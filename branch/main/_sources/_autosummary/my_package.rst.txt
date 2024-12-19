@@ -1,0 +1,18 @@
+﻿my\_package
+===========
+
+.. automodule:: my_package
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module.rst
+   :recursive:
+
+   api
+   cli
+   subpackage1
+   subpackage2
+   utils

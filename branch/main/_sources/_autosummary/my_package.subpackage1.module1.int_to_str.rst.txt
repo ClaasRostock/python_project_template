@@ -1,0 +1,6 @@
+my\_package.subpackage1.module1.int\_to\_str
+============================================
+
+.. currentmodule:: my_package.subpackage1.module1
+
+.. autofunction:: int_to_str
