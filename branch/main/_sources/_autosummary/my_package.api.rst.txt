@@ -1,0 +1,21 @@
+my\_package.api
+===============
+
+.. automodule:: my_package.api
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      run
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class.rst
+   
+      MyPackageProcess
+   

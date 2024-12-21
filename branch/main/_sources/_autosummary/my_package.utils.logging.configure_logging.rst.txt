@@ -1,0 +1,6 @@
+my\_package.utils.logging.configure\_logging
+============================================
+
+.. currentmodule:: my_package.utils.logging
+
+.. autofunction:: configure_logging

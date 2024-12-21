@@ -1,0 +1,6 @@
+my\_package.api.run
+===================
+
+.. currentmodule:: my_package.api
+
+.. autofunction:: run
