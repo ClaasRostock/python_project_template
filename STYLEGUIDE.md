@@ -228,7 +228,7 @@ Long module names can have words separated by underscores (`really_long_module_n
 ```
 
 * Never use mutable objects as default arguments in Python. If an attribute in a class or a named parameter in a function is of a mutable data type (e.g. a list or dict), never set its default value in the declaration of an object but always set it to None first, and then only later assign the default value in the class's constructor, or the functions body, respectively. Sounds complicated? If you prefer the shortcut, the examples below are your friend.
-If your are interested in the long story including the why‘s, read these discussions on [Reddit](https://old.reddit.com/r/Python/comments/opb7hm/do_not_use_mutable_objects_as_default_arguments/) and [Twitter](https://twitter.com/willmcgugan/status/1419616480971399171).
+If you are interested in the long story including the why‘s, read these discussions on [Reddit](https://old.reddit.com/r/Python/comments/opb7hm/do_not_use_mutable_objects_as_default_arguments/) and [Twitter](https://twitter.com/willmcgugan/status/1419616480971399171).
 
 ```py
     # Bad
