@@ -77,7 +77,7 @@ def _argparser() -> argparse.ArgumentParser:
 
 
 def main() -> None:
-    """Entry point for console script as configured in setup.cfg.
+    """Entry point for console script as configured in pyproject.toml.
 
     Runs the command line interface and parses arguments and options entered on the console.
     """
@@ -104,9 +104,7 @@ def main() -> None:
         return
 
     logger.info(
-        f"Start my-package.py with following arguments:\n"
-        f"\t config_file: \t{config_file}\n"
-        f"\t option: \t\t\t{option}\n"
+        f"Start my-package.py with following arguments:\n\t config_file: \t{config_file}\n\t option: \t\t\t{option}\n"
     )
 
     # Invoke API
