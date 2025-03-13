@@ -18,14 +18,19 @@ def configure_logging(
 
     Sets the log levels and formats for the output, ensuring that logs are captured as specified.
 
-    Args:
-        log_level_console (str): The logging level for console output. Defaults to "WARNING".
-        log_file (Path | None): The path to the log file. If None, file logging is disabled. Defaults to None.
-        log_level_file (str): The logging level for file output. Defaults to "WARNING".
+    Parameters
+    ----------
+    log_level_console : str, optional
+        log level for console output, by default "WARNING"
+    log_file : Path | None, optional
+        log file to be used. If None, file logging is disabled. by default None
+    log_level_file : str, optional
+        log level for file output, by default "WARNING"
 
     Raises
     ------
-        TypeError: If the provided log levels are invalid.
+    TypeError
+        if an invalid value for log_level_console or log_level_file is passed
 
     Examples
     --------
@@ -53,11 +58,10 @@ def configure_logging(
         if not log_file.parent.exists():
             log_file.parent.mkdir(parents=True, exist_ok=True)
         file_handler = logging.FileHandler(str(log_file.absolute()), "a")
+        print(f"Logging to: {log_file.absolute()}")  # noqa: T201
         file_handler.setLevel(log_level_file_numeric)
         file_formatter = logging.Formatter("%(asctime)s %(levelname)-8s %(message)s", "%Y-%m-%d %H:%M:%S")
         file_handler.setFormatter(file_formatter)
         root_logger.addHandler(file_handler)
-
-    logging.getLogger("farn").setLevel(logging.WARNING)
 
     return

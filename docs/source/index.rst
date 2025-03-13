@@ -3,18 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-my-package: Example Python Package
-=========================================
+my-package Documentation
+========================
 
 .. toctree::
    :maxdepth: 4
    :caption: Contents:
 
    README
-   CHANGELOG
-   LICENSE
    api
    cli
+   CHANGELOG
+   STYLEGUIDE
+   LICENSE
 
 
 Indices and tables
