@@ -28,9 +28,9 @@ def chdir() -> None:
 
 @pytest.fixture(scope="class", params=TORCH_DEVICES)
 def vary_torch_default_device(request: pytest.FixtureRequest):
-    torch.set_default_device(request.param)  # pyright: ignore[reportUnknownMemberType]
+    torch.set_default_device(request.param)
     yield
-    torch.set_default_device("cpu")  # reset to default device after test  # pyright: ignore[reportUnknownMemberType]
+    torch.set_default_device("cpu")  # reset to default device after test
 
 
 @pytest.fixture(scope="package", autouse=True)
