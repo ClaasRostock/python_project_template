@@ -1,9 +1,7 @@
 API Reference
-=================
+=============
 
-.. autosummary::
-   :toctree: _autosummary
-   :template: custom-module.rst
-   :recursive:
+.. toctree::
+   :maxdepth: 4
 
    my_package

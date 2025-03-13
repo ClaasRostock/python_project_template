@@ -1,4 +1,6 @@
 # ruff: noqa
+# mypy: ignore-errors
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -20,11 +22,11 @@ sys.path.insert(0, str(Path("../../src").absolute()))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "my-package"
-copyright = "2024, Owner. All rights reserved."
+copyright = "2025, Owner. All rights reserved."
 author = "Author One, Author Two, Author Three"
 
 # The full version, including alpha/beta/rc tags
-release = "0.1.9"
+release = "0.1.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -35,9 +37,15 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx_argparse_cli",
     "sphinx.ext.mathjax",
-    "matplotlib.sphinxext.plot_directive",
     "sphinx.ext.autosummary",
     "sphinx.ext.todo",
+    "sphinxcontrib.mermaid",
+]
+
+# Extenstion for myst_parser
+myst_enable_extensions = [
+    "dollarmath",
+    "attrs_inline",
 ]
 
 # The file extensions of source files.
@@ -63,10 +71,15 @@ html_theme = "furo"
 html_static_path = ["_static"]
 html_logo = "_static/my_package.svg"
 autodoc_default_options = {
-    "member-order": "bysource",
+    "member-order": "groupwise",
     "undoc-members": True,
     "exclude-members": "__weakref__",
 }
 autodoc_preserve_defaults = True
 
 myst_heading_anchors = 3
+
+todo_include_todos = False
+
+# add markdown mermaid support
+myst_fence_as_directive = ["mermaid"]
