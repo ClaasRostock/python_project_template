@@ -169,7 +169,7 @@ if (Test-Path $NamesFile) {
 $MandatoryVariables = @(
     "PackageNameDashed",
     "PackageNameCapitalized",
-    "GitHubOrganisation"
+    "GitHubOrganisation",
     "Author1Name",
     "Author1Email"
 )

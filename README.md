@@ -4,7 +4,7 @@ Template repository for Python projects.
 
 ## Create a new repository based on this template
 * On GitHub, create a new repository. When prompted, select [python_project_template](https://github.com/ClaasRostock/python_project_template) as template.
-* Clone the new repositoy to your local machine.
+* Clone the new repository to your local machine.
 
 ## Rename package name, author, etc in the newly created repository
 1. In your local clone (i.e. on your local machine), enter any new names in the `names.csv` file to change the package name, author name etc. <br>
