@@ -11,7 +11,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 ## [0.2.2] - 2025-03-14
 
 ### Changed
-* README.md : Added option `-U` to all calls to `uv sync`
+* README.md : Added option `-U` to all calls to `uv sync`.
 * GitHub workflow _test_future.yml : added a step to remove the Python upper version constraint from pyproject.toml
 
 
