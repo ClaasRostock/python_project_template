@@ -5,12 +5,6 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
-### Dependencies
-* Updated to ruff>=0.11.0  (from ruff>=0.9.5)
-* Updated to pyright>=1.1.396  (from pyright>=1.1.393)
-* Updated to sourcery>=1.35  (from sourcery>=1.33)
-* Updated to pre-commit>=4.1  (from pre-commit>=4.0)
-
 -/-
 
 
@@ -19,6 +13,12 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 ### Changed
 * README.md : Added option `-U` to all calls to `uv sync`.
 * GitHub workflow _test_future.yml : added a step to remove the Python upper version constraint from pyproject.toml
+
+### Dependencies
+* Updated to ruff>=0.11.0  (from ruff>=0.9.5)
+* Updated to pyright>=1.1.396  (from pyright>=1.1.393)
+* Updated to sourcery>=1.35  (from sourcery>=1.33)
+* Updated to pre-commit>=4.1  (from pre-commit>=4.0)
 
 
 ## [0.2.1] - 2025-03-13
