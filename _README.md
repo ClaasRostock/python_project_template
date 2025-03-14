@@ -85,6 +85,9 @@ uv sync -U
 ```
 > **Note**: Using `--no-dev` will omit installing development dependencies.
 
+> **Explanation**: The `-U` option stands for `--update`. It forces `uv` to fetch and install the latest versions of all dependencies,
+> ensuring that your environment is up-to-date.
+
 > **Note**: `uv` will create a new virtual environment called `.venv` in the project root directory when running
 > `uv sync -U` the first time. Optionally, you can create your own virtual environment using e.g. `uv venv`, before running
 > `uv sync -U`.
