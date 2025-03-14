@@ -1,0 +1,37 @@
+title: my-package
+version: 0.1.0
+abstract: >-
+  my-package is an example package supporting xyz.
+type: software
+authors:
+  - name: Owner
+    address: 'Street 1'
+    post-code: '1234'
+    city: City
+    country: DE
+    website: 'https://www.xyz.com/'
+  - given-names: Author
+    family-names: One
+    affiliation: Owner
+    email: author.one@xyz.com
+    website: 'https://www.linkedin.com/in/authorone'
+  - given-names: Author
+    family-names: Two
+    affiliation: Owner
+    email: author.two@xyz.com
+    website: 'https://www.linkedin.com/in/authortwo'
+  - given-names: Author
+    family-names: Three
+    affiliation: Owner
+    email: author.three@xyz.com
+    website: 'https://www.linkedin.com/in/authorthree'
+keywords:
+  - Keyword One
+  - Keyword Two
+  - Keyword Three
+license: MIT
+license-url: 'https://owner.github.io/my-package/LICENSE.html'
+url: 'https://owner.github.io/my-package/README.html'
+repository-code: 'https://github.com/owner/my-package'
+message: 'Please cite this software using these metadata.'
+cff-version: 1.2.0

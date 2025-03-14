@@ -6,9 +6,6 @@ from pathlib import Path
 
 from dictIO import DictReader
 
-from my_package.subpackage1.module1 import int_to_str
-from my_package.subpackage2.module2 import str_to_int
-
 __ALL__ = ["run", "MyPackageProcess"]
 
 logger = logging.getLogger(__name__)
@@ -148,7 +145,7 @@ def _do_cool_stuff(run_number: int) -> str:
     str
         the run number converted to string
     """
-    result: str = int_to_str(run_number)
+    result: str = str(run_number)
     return result
 
 
@@ -167,5 +164,5 @@ def _do_even_cooler_stuff(string: str) -> int:
     int
         the resulting integer
     """
-    result: int = str_to_int(string)
+    result: int = int(string)
     return result

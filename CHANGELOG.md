@@ -8,6 +8,54 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 -/-
 
 
+## [0.2.1] - 2025-03-13
+
+### Added
+* Sphinx documentation: Added extension to support Markdown-based diagrams created with Mermaid.
+* Added CITATION.cff file allowing to enter citation information which gets shown on GitHub.
+* Added support for Python 3.13
+* pyproject.toml : Added keywords
+* Added PowerShell script `rename_package.ps1`, supporting the initial renaming of package name, author, modules etc after a new repository has been created based on this template.
+* Added a temporary `README.md`, documenting how to create a new repository based on this template. <br>
+The original README.md does still exist, but got renamed to `_README.md`. <br>
+The PowerShell script `rename_package.ps1` also takes care to delete the temporary README.md containing the instructions on template usage and restore the original / "production" `README.md` .
+
+### Changed
+* Sphinx documentation: Changed default top-level structure for API documentation.
+* ruff.toml: updated
+* pytest.ini : Added option `--duration=10`. <br>
+  This will show a table listing the 10 slowest tests at the end of any test session.
+* pyproject.toml:
+  * cleaned up and restructured dependencies
+  * Turned 'dev-dependencies' into a dependency group 'dev' in table [dependency-groups]. <br>
+    (This is the more modern style to declare project dependencies)
+* VS Code settings: Changed "mypy-type-checker.preferDaemon" from 'false' to 'true'
+* Sphinx documentation:
+  * index.rst : Changed order of toc tree headlines
+  * conf.py : Added selected settings introduced in the latest work in axtreme repository
+* tests/test_api.py : Added type annotation for return types
+* GitHub workflows _test.yml and _test_future.yml : rewrote how pytest gets called in a cleaner way
+* Renamed the CLI module from 'src/my_package/cli/my_package.py' to 'src/my_package/cli/\_\_main\_\_.py' in order to avoid an import error establishing in case the user chooses a single-word package name (i.e. a package name without a hyphen). In such case, the names of the CLI script, the CLI module and the package are all same, which leads to problems when importing from the package inside the CLI module. Giving the CLI module a different name (as e.g. done now by renaming 'my_package.py' to '\_\_main\_\_.py') solves the name clash and import error.
+* Do not run code quality checks in nightly builds
+* Included uv.lock file in version control
+* GitHub workflows: Enable cache by default. <br>
+
+### Solved
+* Sphinx documentation: Resolved issue that documentation of class members was generated twice.
+* pre-commit-config.yaml: Corrected how `--fix=auto` gets passed as argument
+* Resolved issues raised by `ruff` 0.9.5
+
+### Dependencies
+* Updated to torch==2.6.0  (from torch==2.5.1)
+* Updated to ruff>=0.9.5  (from ruff>=0.9.2)
+* Updated to pyright>=1.1.393  (from pyright>=1.1.392)
+* Updated to sourcery>=1.33  (from sourcery>=1.31)
+* Updated to sphinx-autodoc-typehints>=3.0  (from sphinx-autodoc-typehints>=2.5)
+* Updated to mypy>=1.14  (from mypy>=1.13)
+* Updated to setup-uv@v5  (from setup-uv@v2)
+* Updated to dictIO>=0.4.1  (from dictIO>=0.4.0)
+
+
 ## [0.1.9] - 2024-09-27
 
 ### Changed
@@ -129,7 +177,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/owner/my-package/compare/v0.1.9...HEAD
+[unreleased]: https://github.com/owner/my-package/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/owner/my-package/releases/tag/v0.1.9...v0.2.1
 [0.1.9]: https://github.com/owner/my-package/releases/tag/v0.1.6...v0.1.9
 [0.1.6]: https://github.com/owner/my-package/releases/tag/v0.1.4...v0.1.6
 [0.1.4]: https://github.com/owner/my-package/releases/tag/v0.1.3...v0.1.4
