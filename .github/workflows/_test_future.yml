@@ -28,6 +28,25 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python.version }}
+      - name: Remove Python upper version constraint from pyproject.toml
+        shell: pwsh
+        run: |
+          $TestVersion = "${{ matrix.python.uvpy }}"
+          [regex]$VersionPattern = "\d+\.\d+"
+          $UpperVersion = $null
+          if ($TestVersion -match $VersionPattern) {
+              $UpperVersion = $Matches[0]
+          }
+          else {
+              $UpperVersion = "\d+\.\d+" # Default to any version
+          }
+          [regex]$Pattern = ",\s?<\s?$UpperVersion"
+          $Replace = ""
+          $File = Get-Item pyproject.toml
+          $Content = Get-Content $File -Raw
+          if ($Content -match $Pattern) {
+              $Content -Replace $Pattern, $Replace | Set-Content $File -NoNewline
+          }
       - name: Install the project
         run: uv sync -p ${{ matrix.python.uvpy }} -U --no-dev
       - name: Run pytest

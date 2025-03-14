@@ -8,6 +8,19 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 -/-
 
 
+## [0.2.2] - 2025-03-14
+
+### Changed
+* README.md : Added option `-U` to all calls to `uv sync`.
+* GitHub workflow _test_future.yml : added a step to remove the Python upper version constraint from pyproject.toml
+
+### Dependencies
+* Updated to ruff>=0.11.0  (from ruff>=0.9.5)
+* Updated to pyright>=1.1.396  (from pyright>=1.1.393)
+* Updated to sourcery>=1.35  (from sourcery>=1.33)
+* Updated to pre-commit>=4.1  (from pre-commit>=4.0)
+
+
 ## [0.2.1] - 2025-03-13
 
 ### Added
@@ -177,7 +190,8 @@ The PowerShell script `rename_package.ps1` also takes care to delete the tempora
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/owner/my-package/compare/v0.2.1...HEAD
+[unreleased]: https://github.com/owner/my-package/compare/v0.2.2...HEAD
+[0.2.2]: https://github.com/owner/my-package/releases/tag/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/owner/my-package/releases/tag/v0.1.9...v0.2.1
 [0.1.9]: https://github.com/owner/my-package/releases/tag/v0.1.6...v0.1.9
 [0.1.6]: https://github.com/owner/my-package/releases/tag/v0.1.4...v0.1.6
