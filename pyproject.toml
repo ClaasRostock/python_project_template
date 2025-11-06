@@ -62,8 +62,7 @@ classifiers = [
 ]
 dependencies = [
     "dictIO>=0.4.1",
-    "numpy>=1.26; python_version < '3.13'",
-    "numpy>=2.2; python_version >= '3.13'",
+    "numpy>=2.3",
     "torch==2.6.0",
 ]
 
