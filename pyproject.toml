@@ -61,7 +61,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "dictIO>=0.4.1",
+    "dictIO>=0.4.2",
     "numpy>=2.3",
     "torch==2.9.0",
 ]
