@@ -5,6 +5,12 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
+### Added
+* Added support for Python 3.14
+
+### Removed
+* Removed support for Python 3.10
+
 ### Dependencies
 * Updated to ruff>=0.14.3  (from ruff>=0.11.0)
 * Updated to pyright>=1.1.407  (from pyright>=1.1.396)
@@ -27,22 +33,31 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * Updated to setup-uv@v7  (from setup-uv@v5)
 * Updated to upload-artifact@v5  (from upload-artifact@v4)
 * Updated to download-artifact@v5  (from download-artifact@v4)
-* pyproject.toml: added required-environments to uv.tools (windows, linux, macos)
-* pyproject.toml: updated required Python version to ">= 3.11, < 3.15"
-* pyproject.toml: updated supported Python versions to 3.11, 3.12, 3.13, 3.14
-* .sourcery.yaml: updated the lowest Python version the project supports to '3.11'
-* pyproject.toml: removed deprecated pyright setting 'reportShadowedImports'
-* pyproject.toml: removed deprecated mypy plugin 'numpy.typing.mypy_plugin'
-* GitHub workflow _test.yml: updated Python versions in test matrix to 3.11, 3.12, 3.13, 3.14
-* GitHub workflow _test_future.yml: updated Python version in test_future to 3.15.0-alpha - 3.15.0
-* GitHub workflow _test_future.yml: updated name of test_future job to 'test315'
-* GitHub workflow _test_future.yml: updated Python specifier in comment to 3.15
-* GitHub workflow _test_future.yml: updated Python specifier in workflow name to py315
-* .pre-commit-config.yaml: updated rev of pre-commit-hooks to v6.0.0
-* .pre-commit-config.yaml: updated rev of ruff-pre-commit to v0.14.3
-* .pre-commit-config.yaml: updated id of ruff to ruff-check
 
--/-
+### Changed
+* pyproject.toml:
+  * added required-environments to uv.tools (windows, linux)
+  * updated required Python version to ">= 3.11, < 3.15"
+  * updated supported Python versions to 3.11, 3.12, 3.13, 3.14
+  * removed deprecated pyright setting 'reportShadowedImports'
+  * removed deprecated mypy plugin 'numpy.typing.mypy_plugin'
+* GitHub workflow _test.yml:
+  * updated Python versions in test matrix to 3.11, 3.12, 3.13, 3.14
+* GitHub workflow _test_future.yml:
+  * updated Python version in test_future to 3.15.0-alpha - 3.15.0
+* .pre-commit-config.yaml:
+  * updated rev of pre-commit-hooks to v6.0.0
+  * updated rev of ruff-pre-commit to v0.14.3
+  * updated id of ruff to ruff-check
+* Sphinx conf.py:
+  * removed ruff rule exception on file level
+* demos\folder_for_demos.py:
+  * removed ruff rule exception
+* .sourcery.yaml:
+  * updated the lowest Python version the project supports to '3.11'
+
+### Solved
+* Resolved issues raised by `ruff` 0.14.3
 
 
 ## [0.2.2] - 2025-03-14
