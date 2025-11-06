@@ -63,12 +63,12 @@ classifiers = [
 dependencies = [
     "dictIO>=0.4.1",
     "numpy>=2.3",
-    "torch==2.6.0",
+    "torch==2.9.0",
 ]
 
 [project.optional-dependencies]
 cuda = [
-    "torch==2.6.0+cu126",
+    "torch==2.9.0+cu126",
 ]
 
 [project.urls]
