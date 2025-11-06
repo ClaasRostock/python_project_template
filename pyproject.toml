@@ -118,9 +118,7 @@ my-package = "my_package.cli.__main__:main"
 
 
 [tool.mypy]
-plugins = [
-    "numpy.typing.mypy_plugin",
-]
+plugins = []
 mypy_path = "stubs"
 files = [
     "src",
