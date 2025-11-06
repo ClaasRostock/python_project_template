@@ -5,6 +5,11 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
+-/-
+
+
+## [0.2.3] - 2025-11-06
+
 ### Added
 * Added support for Python 3.14
 
@@ -242,7 +247,8 @@ The PowerShell script `rename_package.ps1` also takes care to delete the tempora
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/owner/my-package/compare/v0.2.2...HEAD
+[unreleased]: https://github.com/owner/my-package/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/owner/my-package/releases/tag/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/owner/my-package/releases/tag/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/owner/my-package/releases/tag/v0.1.9...v0.2.1
 [0.1.9]: https://github.com/owner/my-package/releases/tag/v0.1.6...v0.1.9
