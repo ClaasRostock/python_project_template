@@ -28,7 +28,7 @@ name = "my-package"
 version = "0.1.0"
 description = "example package short description."
 readme = "README.md"
-requires-python = ">= 3.10, < 3.14"
+requires-python = ">= 3.11, < 3.15"
 license = { file = "LICENSE" }
 authors = [
     { name = "Author One", email = "author.one@xyz.com" },
