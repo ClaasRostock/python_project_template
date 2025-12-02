@@ -5,6 +5,13 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
+### Dependencies
+* ruff.toml: updated target Python version to "py311"
+* pyproject.toml: removed leading carets and trailing slashes from 'exclude' paths
+* pyproject.toml: removed trailing slashes from 'exclude' paths
+* VS Code settings: (Recommended extensions) Removed deprecated IntelliCode extension and replaced it by GitHub Copilot Chat as recommended replacement.
+* VS Code settings: Updated 'mypy-type-checker.reportingScope' to 'custom'.
+
 -/-
 
 
