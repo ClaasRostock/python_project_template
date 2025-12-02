@@ -5,7 +5,9 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
--/-
+### Changed
+* GitHub workflow _test_future.yml:
+  * Improved the regex and PowerShell code that finds and removes the Python upper version constraint in pyproject.toml
 
 
 ## [0.2.4] - 2025-12-02
