@@ -8,6 +8,18 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 -/-
 
 
+## [0.2.4] - 2025-12-02
+
+### Changed
+* ruff.toml:
+  * updated target Python version to "py311"
+* pyproject.toml:
+  * removed leading carets and trailing slashes from 'exclude' paths
+* VS Code settings:
+  * (Recommended extensions) Removed deprecated IntelliCode extension and replaced it by GitHub Copilot Chat as recommended replacement.
+  * Updated 'mypy-type-checker.reportingScope' to 'custom'.
+
+
 ## [0.2.3] - 2025-11-06
 
 ### Added
@@ -247,15 +259,16 @@ The PowerShell script `rename_package.ps1` also takes care to delete the tempora
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/owner/my-package/compare/v0.2.3...HEAD
-[0.2.3]: https://github.com/owner/my-package/releases/tag/v0.2.2...v0.2.3
-[0.2.2]: https://github.com/owner/my-package/releases/tag/v0.2.1...v0.2.2
-[0.2.1]: https://github.com/owner/my-package/releases/tag/v0.1.9...v0.2.1
-[0.1.9]: https://github.com/owner/my-package/releases/tag/v0.1.6...v0.1.9
-[0.1.6]: https://github.com/owner/my-package/releases/tag/v0.1.4...v0.1.6
-[0.1.4]: https://github.com/owner/my-package/releases/tag/v0.1.3...v0.1.4
-[0.1.3]: https://github.com/owner/my-package/releases/tag/v0.1.2...v0.1.3
-[0.1.2]: https://github.com/owner/my-package/releases/tag/v0.1.0...v0.1.2
-[0.1.0]: https://github.com/owner/my-package/releases/tag/v0.0.1...v0.1.0
+[unreleased]: https://github.com/owner/my-package/compare/v0.2.4...HEAD
+[0.2.4]: https://github.com/owner/my-package/compare/v0.2.3...v0.2.4
+[0.2.3]: https://github.com/owner/my-package/compare/v0.2.2...v0.2.3
+[0.2.2]: https://github.com/owner/my-package/compare/v0.2.1...v0.2.2
+[0.2.1]: https://github.com/owner/my-package/compare/v0.1.9...v0.2.1
+[0.1.9]: https://github.com/owner/my-package/compare/v0.1.6...v0.1.9
+[0.1.6]: https://github.com/owner/my-package/compare/v0.1.4...v0.1.6
+[0.1.4]: https://github.com/owner/my-package/compare/v0.1.3...v0.1.4
+[0.1.3]: https://github.com/owner/my-package/compare/v0.1.2...v0.1.3
+[0.1.2]: https://github.com/owner/my-package/compare/v0.1.0...v0.1.2
+[0.1.0]: https://github.com/owner/my-package/compare/v0.0.1...v0.1.0
 [0.0.1]: https://github.com/owner/my-package/releases/tag/v0.0.1
 [my-package]: https://github.com/owner/my-package
