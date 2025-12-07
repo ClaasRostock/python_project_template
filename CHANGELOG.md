@@ -5,7 +5,20 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## [Unreleased]
 
--/-
+* -/-
+
+
+## [0.2.5] - 2025-12-07
+
+### Changed
+* GitHub workflow _test_future.yml:
+  * Improved the regex and PowerShell code that finds and removes the Python upper version constraint in pyproject.toml
+* GitHub workflow _build_and_publish_documentation.yml:
+  * Changed 'uv sync --upgrade' to 'uv sync --frozen' to avoid unintentional package upgrades.
+* VS Code Recommended extensions:
+  * Removed 'njqdev.vscode-python-typehint' (Python Type Hint). Not maintained since 1 year, and the functionality is now covered by GitHub Copilot.
+  * Added 'ms-python.debugpy' (Python Debugger).
+  * Added 'ms-python.vscode-python-envs' (Python Environments).
 
 
 ## [0.2.4] - 2025-12-02
@@ -259,7 +272,8 @@ The PowerShell script `rename_package.ps1` also takes care to delete the tempora
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/owner/my-package/compare/v0.2.4...HEAD
+[unreleased]: https://github.com/owner/my-package/compare/v0.2.5...HEAD
+[0.2.5]: https://github.com/owner/my-package/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/owner/my-package/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/owner/my-package/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/owner/my-package/compare/v0.2.1...v0.2.2
