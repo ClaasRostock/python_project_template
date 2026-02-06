@@ -8,6 +8,47 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * -/-
 
 
+## [0.2.7] - 2026-02-06
+
+### Changed
+* GitHub Workflows:
+  * Changed 'uv sync --upgrade' to 'uv sync -U'
+  * Removed redundant 'Set up Python' steps (no longer needed, as 'uv sync' will automatically install Python if not present).
+* pyproject.toml:
+  * Removed upper version constraint from required Python version, i.e. changed the "requires-python" field from ">= 3.11, < 3.15" to ">= 3.11". <br>
+    Detailed background and reasoning in this good yet long post by Henry Schreiner:
+    https://iscinumpy.dev/post/bound-version-constraints/#pinning-the-python-version-is-special <br>
+    TLDR: Placing an upper Python version constraint on a Python package causes more harm than it provides benefits.
+    The upper version constraint unnecessarily manifests incompatibility with future Python releases.
+    Removing the upper version constraint ensures the package remains installable as Python evolves.
+    In the majority of cases, the newer Python version will anyhow be backward-compatible. And in the rare case where your package would really not work with a newer Python version,
+    users can at least find a solution manually to resolve the conflict, e.g. by pinning your package to the last version compatible with the environment they install it in.
+    That way, we ensure it remains _possible_ for users to find a solution, instead of rendering it impossible forever.
+* ruff.toml: Added file-specific ignores for modules named "types.py"
+* VS Code Settings:
+  * launch.json: cleaned up the launch configurations and made them uniform
+* Sphinx Documentation:
+  * Sphinx conf.py: Updated year in copyright statement to 2026
+
+### Dependencies
+* Updated to pre-commit>=4.5
+* Updated to pyright>=1.1.408
+* Updated to sphinx-autodoc-typehints>=3.6
+* Updated to furo>=2025.12
+* Updated to sphinx-argparse-cli>=1.20.1
+* Updated to pytest>=9.0
+* Updated to sourcery>=1.43.0
+* Updated to myst-parser>=5.0
+* Updated to mypy>=1.19.1
+* Updated to sphinxcontrib-mermaid>=2.0
+* Updated to pandas-stubs>=3.0
+* Updated to ruff>=0.15.0
+* Updated to jupyter>=1.1.1
+* Added nbconvert, types-lxml and scipy-stubs to dev dependencies
+* Update to nbconvert>=7.17, to close a security vulnerability in nbconvert <=7.16.6 (See https://github.com/advisories/GHSA-xm59-rqc7-hhvf)
+* .pre-commit-config.yaml: Updated rev of ruff-pre-commit to v0.15.0
+
+
 ## [0.2.5] - 2025-12-07
 
 ### Changed
@@ -272,7 +313,8 @@ The PowerShell script `rename_package.ps1` also takes care to delete the tempora
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/owner/my-package/compare/v0.2.5...HEAD
+[unreleased]: https://github.com/owner/my-package/compare/v0.2.7...HEAD
+[0.2.7]: https://github.com/owner/my-package/compare/v0.2.5...v0.2.7
 [0.2.5]: https://github.com/owner/my-package/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/owner/my-package/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/owner/my-package/compare/v0.2.2...v0.2.3
