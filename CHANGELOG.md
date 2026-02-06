@@ -41,6 +41,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * Updated to ruff>=0.15.0
 * Updated to jupyter>=1.1.1
 * .pre-commit-config.yaml: Updated rev of ruff-pre-commit to v0.15.0
+* Updated to pyro-api>=0.1.2
+* Updated to ax-dnv>=0.4.0.dev1
 
 
 ## [0.2.5] - 2025-12-07
