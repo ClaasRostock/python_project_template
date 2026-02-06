@@ -24,7 +24,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
-          cache-dependency-glob: "uv.lock"
+          cache-dependency-glob: 'uv.lock'
       - name: Install the project
         run: uv sync -p ${{ matrix.python.version }} -U --no-dev
       - name: Run pytest
