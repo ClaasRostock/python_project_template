@@ -8,6 +8,12 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * -/-
 
 
+### Changed
+* GitHub Workflows:
+  * Changed 'uv sync --upgrade' to 'uv sync -U'
+  * Removed redundant 'Set up Python' steps (no longer needed, as 'uv sync' will automatically install Python if not present).
+
+
 ## [0.2.5] - 2025-12-07
 
 ### Changed
