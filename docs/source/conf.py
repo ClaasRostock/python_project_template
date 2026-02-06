@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path("../../src").absolute()))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "my-package"
-copyright = "2025, Owner. All rights reserved."
+copyright = "2026, Owner. All rights reserved."
 author = "Author One, Author Two, Author Three"
 
 # The full version, including alpha/beta/rc tags
