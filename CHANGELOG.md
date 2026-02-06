@@ -18,7 +18,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
   * Removed upper version constraint from required Python version, i.e. changed the "requires-python" field from ">= 3.11, < 3.15" to ">= 3.11". <br>
     Detailed background and reasoning in this good yet long post by Henry Schreiner:
     https://iscinumpy.dev/post/bound-version-constraints/#pinning-the-python-version-is-special <br>
-    TLDR: Placing an upper Python version constraint on a Python package causes more harm then it provides benefits.
+    TLDR: Placing an upper Python version constraint on a Python package causes more harm than it provides benefits.
     The upper version constraint unnecessarily manifests incompatibility with future Python releases.
     Removing the upper version constraint ensures the package remains installable as Python evolves.
     In the majority of cases, the newer Python version will anyhow be backward-compatible. And in the rare case where your package would really not work with a newer Python version,
