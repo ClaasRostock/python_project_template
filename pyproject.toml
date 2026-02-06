@@ -23,6 +23,9 @@ packages = [
     "src/my_package",
 ]
 
+[tool.hatch.metadata]
+allow-direct-references = true
+
 [project]
 name = "my-package"
 version = "0.1.0"
@@ -95,7 +98,10 @@ dev = [
     "myst-parser>=5.0",
     "furo>=2025.12",
     "jupyter>=1.1.1",
+    "nbconvert>=7.17",
     "pandas-stubs>=3.0",
+    "types-lxml>=2026.1",
+    "scipy-stubs>=1.17.0",
 ]
 
 [tool.uv]
