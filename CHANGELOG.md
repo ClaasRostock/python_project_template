@@ -26,6 +26,23 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
   * Sphinx conf.py: Updated year in copyright statement to 2026
 
 
+### Dependencies
+* Updated to pre-commit>=4.5
+* Updated to pyright>=1.1.408
+* Updated to sphinx-autodoc-typehints>=3.6
+* Updated to furo>=2025.12
+* Updated to sphinx-argparse-cli>=1.20.1
+* Updated to pytest>=9.0
+* Updated to sourcery>=1.43.0
+* Updated to myst-parser>=5.0
+* Updated to mypy>=1.19.1
+* Updated to sphinxcontrib-mermaid>=2.0
+* Updated to pandas-stubs>=3.0
+* Updated to ruff>=0.15.0
+* Updated to jupyter>=1.1.1
+* .pre-commit-config.yaml: Updated rev of ruff-pre-commit to v0.15.0
+
+
 ## [0.2.5] - 2025-12-07
 
 ### Changed
