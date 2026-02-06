@@ -8,6 +8,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * -/-
 
 
+## [0.2.7] - 2026-02-06
+
 ### Changed
 * GitHub Workflows:
   * Changed 'uv sync --upgrade' to 'uv sync -U'
@@ -22,9 +24,11 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
     In the majority of cases, the newer Python version will anyhow be backward-compatible. And in the rare case where your package would really not work with a newer Python version,
     users can at least find a solution manually to resolve the conflict, e.g. by pinning your package to the last version compatible with the environment they install it in.
     That way, we ensure it remains _possible_ for users to find a solution, instead of rendering it impossible forever.
+* ruff.toml: Added file-specific ignores for modules named "types.py"
+* VS Code Settings:
+  * launch.json: cleaned up the launch configurations and made them uniform
 * Sphinx Documentation:
   * Sphinx conf.py: Updated year in copyright statement to 2026
-
 
 ### Dependencies
 * Updated to pre-commit>=4.5
@@ -40,9 +44,9 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * Updated to pandas-stubs>=3.0
 * Updated to ruff>=0.15.0
 * Updated to jupyter>=1.1.1
+* Added nbconvert, types-lxml and scipy-stubs to dev dependencies
+* Update to nbconvert>=7.17, to close a security vulnerability in nbconvert <=7.16.6 (See https://github.com/advisories/GHSA-xm59-rqc7-hhvf)
 * .pre-commit-config.yaml: Updated rev of ruff-pre-commit to v0.15.0
-* Updated to pyro-api>=0.1.2
-* Updated to ax-dnv>=0.4.0.dev1
 
 
 ## [0.2.5] - 2025-12-07
@@ -309,7 +313,8 @@ The PowerShell script `rename_package.ps1` also takes care to delete the tempora
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/owner/my-package/compare/v0.2.5...HEAD
+[unreleased]: https://github.com/owner/my-package/compare/v0.2.7...HEAD
+[0.2.7]: https://github.com/owner/my-package/compare/v0.2.5...v0.2.7
 [0.2.5]: https://github.com/owner/my-package/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/owner/my-package/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/owner/my-package/compare/v0.2.2...v0.2.3
