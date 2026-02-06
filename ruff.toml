@@ -155,6 +155,10 @@ raises-require-match-for = [
     "A001",   # Variable {name} is shadowing a Python builtin
     "D100",   # Missing docstring in public module
 ]
+# types.py specific ignores
+"**/types.py" = [
+    "A005", # Module `types` shadows a Python standard-library module
+]
 
 [lint.pydocstyle]
 convention = "numpy"
