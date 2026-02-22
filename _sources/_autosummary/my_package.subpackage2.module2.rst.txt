@@ -1,0 +1,13 @@
+my\_package.subpackage2.module2
+===============================
+
+.. automodule:: my_package.subpackage2.module2
+   :members:
+
+
+   
+   .. rubric:: Functions
+   .. autosummary::
+   
+      str_to_int
+   
