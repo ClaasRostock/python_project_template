@@ -1,0 +1,13 @@
+my\_package.utils.logging
+=========================
+
+.. automodule:: my_package.utils.logging
+   :members:
+
+
+   
+   .. rubric:: Functions
+   .. autosummary::
+   
+      configure_logging
+   
