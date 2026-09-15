@@ -1,0 +1,15 @@
+﻿my\_package.subpackage1
+=======================
+
+.. automodule:: my_package.subpackage1
+   :members:
+
+
+   
+.. rubric:: Modules
+.. autosummary::
+   :toctree:
+   :template: custom-module.rst
+   :recursive:
+
+   module1
